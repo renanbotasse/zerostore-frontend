@@ -1,0 +1,10 @@
+.NewCard{
+    background-color: #EEB836ff ;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    padding: 10px;
+    color: #D52900ff;
+    border-top: 1px solid #FDFEFFff;
+}
