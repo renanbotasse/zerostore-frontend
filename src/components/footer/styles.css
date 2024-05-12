@@ -1,0 +1,56 @@
+.footer {
+    background-color: #0070E9ff;
+    font-size: small;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    color: #FDFEFFff;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.footerDiv {
+    flex: 1;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    border-right: 2px solid #FDFEFFff;
+    text-align: center; /* Alinha o texto horizontalmente */
+}
+
+.footerDiv:last-child {
+    border-right: none; /* Remove a borda direita da última div */
+}
+
+.footerSocial {
+    flex: 1;
+    border-right: 2px solid #FDFEFFff; /* Adiciona uma borda direita */
+}
+
+.footerItem {
+    display: flex;
+    justify-content:left;
+}
+
+.footerDiv img {
+    margin-right: 8px;
+    width: 16px; /* Define a largura da imagem */
+    height: 16px; /* Define a altura da imagem */
+    vertical-align: middle; /* Alinha verticalmente o ícone com o texto */
+}
+
+.footerDiv p {
+    font-size: large;
+}
+
+.footerItem span {
+    max-width: 400px; /* Defina a largura máxima do span conforme necessário */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.socialFooter {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 60px; /* Ajuste a margem conforme necessário */
+}

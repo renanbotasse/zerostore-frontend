@@ -1,0 +1,166 @@
+/* styles.css */
+
+.Navbar {
+    display: flex;
+    padding: 16px;
+    color: #FDFEFFff;
+    border-top: 1px solid #FDFEFFff;
+    position: relative;
+    background-color: #0070E9ff;
+    /* Adicionando posição relativa ao Navbar para controlar o z-index do dropdown */
+}
+
+
+.Navbar-bg {
+    display: flex;
+    padding: 16px;
+    color: #FDFEFFff;
+    border-top: 1px solid #FDFEFFff;
+    position: sticky;
+    /* Alterando para position: sticky */
+    top: 0;
+    /* Fixando no topo */
+    z-index: 1000;
+    /* Ajustando o z-index para garantir que fique acima dos outros elementos */
+    background-color: #0070E9ff;
+}
+
+.Navbar-hidde {
+    display: none;
+}
+
+.NavbarLink {
+    float: left;
+    overflow: hidden;
+    padding-right: 8px;
+    margin: 5px;
+    border-right: 2px solid #FDFEFFff;
+    transition: color 0.3s ease;
+    /* Adicionando transição de cor */
+}
+
+.NavbarLink:hover {
+    color: #FDFEFFff;
+    font-weight: bold;
+    /* Invertendo a cor ao passar o mouse */
+    cursor: pointer;
+    /* Mudando o cursor ao passar o mouse */
+}
+
+.DropdownLinks {
+    position: absolute;
+    background-color: #0070E9ff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(2, 2, 2, 2);
+    z-index: 100;
+    /* Definindo um z-index alto para garantir que o dropdown fique acima dos outros elementos */
+}
+
+.DropdownItem {
+    display: flex;
+    align-items: center;
+}
+
+.DropdownItem:hover {
+    background-color: #D52900ff;
+    transition: 0.5s;
+}
+
+.DropdownItemIcon {
+    margin-right: 8px
+}
+
+
+/* Adicionando filtro azul aos itens do dropdown */
+.DropdownLinks div {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    /* Adicionando uma borda inferior para separar os links */
+}
+
+.DropdownLinks div:last-child {
+    border-bottom: none;
+    /* Removendo a borda inferior do último link */
+}
+
+.DropdownLinks div:hover {
+    filter: none;
+    /* Removendo o filtro ao passar o mouse */
+    cursor: pointer;
+    /* Mudando o cursor ao passar o mouse */
+}
+
+.NavbarItems {
+    display: flex;
+}
+
+.NavbarItemsRight {
+    margin-left: auto;
+}
+
+.Navbar__Link-toggle {
+    display: none;
+}
+
+.NavbarComplet {
+    background-color: #0070E9ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FDFEFFff;
+    margin-left: 33vh;
+}
+.SearchDivBar{
+    display: flex;
+    align-items: center;
+}
+.SearchInputBar{
+    border: 1px solid black;
+    align-items: center;
+    border-radius: 20px;
+    padding: 8px 16px;
+}
+
+.cartBar {
+    display: flex;
+    align-items: center;
+    margin-left: 33vh; /* Adicionando um espaçamento à direita para separar do próximo elemento */
+}
+
+.cartPriceBar {
+    margin: 10px;
+}
+
+.ProfileBar {
+    margin-left: 20px; /* Adicionando um espaçamento à esquerda para separar do próximo elemento */
+    margin-right: 20px
+}
+
+
+/* Estilos para responsividade */
+@media only screen and (max-width: 768px) {
+
+    .NavbarItems,
+    .Navbar {
+        flex-direction: column;
+    }
+
+    .NavbarItems {
+        display: none;
+    }
+
+    .NavbarItemsRight {
+        margin-left: 0;
+    }
+
+    .Navbar__ToggleShow {
+        display: flex;
+    }
+
+    .Navbar__Link-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,45 @@
+.carouselproduct {
+    width: 100%;
+    height: 100%; /* Defina a altura do contêiner como 50% da altura da tela */
+    overflow: hidden; /* Para garantir que as imagens não ultrapassem o contêiner */
+    object-fit: cover;
+}
+
+.carouselproduct-track {
+    display: flex;
+
+}
+
+.carouselproduct-slide {
+    flex: 0 0 auto; /* Para manter o tamanho original das imagens */
+    margin-left: 30%;
+}
+
+.carouselproduct-slide img {
+    width: 100%; /* As imagens ocupam toda a largura do slide */
+    margin-left: 10px;
+    max-width: 700px;
+    max-height: 500px;
+    height: 60vh; /* As imagens ocupam toda a altura do slide */
+    border-radius: 20px;
+}
+
+.carouselproduct-thumbnails {
+    height: 40% ;
+    width: 12%;
+    margin-left: 5%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    
+}
+
+.productthumbnail-button img {
+    border-radius: 10px;
+    
+}
