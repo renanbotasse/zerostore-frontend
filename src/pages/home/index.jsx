@@ -1,18 +1,15 @@
 import Footer from '../../components/footer/index'
-import Header from '../../components/header/index'
-import Carousel from '../../components/carousel/index';
-import DestaqueCard from '../../components/destaqueCard/index';
-import NewCard from '../../components/newCard';
-import NavbarMain from "../../components/navbar";
+import DisplayHorizontalBlock from "../../components/banner";
+import Hero from "../../components/herobanner/index"
+import TopNav from '../../components/topnavbar';
+import '../../globals.css';
 
 export default function Home() {
     return (
         <div>
-            <Header />
-            <NavbarMain />
-            <Carousel />
-            <DestaqueCard/>
-            <NewCard/>
+            <TopNav/>
+            <Hero/>
+            <DisplayHorizontalBlock/>
             <Footer />
         </div>
     );

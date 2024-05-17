@@ -1,65 +1,136 @@
-import React from "react";
-import './styles.css';
-import { FaFacebook } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
-import { IoLogoWhatsapp } from "react-icons/io5";
-import cookiesIcon from '../../../src/assets/cookies.png'; // Importando a imagem do ícone de SNES
-import termosIcon from '../../../src/assets/termos.png'; // Importando a imagem do ícone de SNES
-import emailIcon from '../../../src/assets/email.png'; // Importando a imagem do ícone de SNES
-import marketIcon from '../../../src/assets/market.png'; // Importando a imagem do ícone de SNES
-import phoneIcon from '../../../src/assets/phone.png'; // Importando a imagem do ícone de SNES
-import openIcon from '../../../src/assets/open.png'; // Importando a imagem do ícone de SNES
+import {
+    SfIconContactSupport,
+    SfIconFacebook,
+    SfIconHelp,
+    SfIconInstagram,
+    SfIconCall,
+    SfIconPinterest,
+    SfIconTwitter,
+    SfIconYoutube,
+    SfButton,
+    SfLink,
+    SfListItem,
+} from '@storefront-ui/react';
 
-class Footer extends React.Component {
-    render() {
-        return (
-            <footer className="footer">
-                <div className="footerDiv">
-                    <div className="footerItem">
-                        <img src={openIcon} alt="SNES Icon" width={16} height={16} />
-                        <span>09h às 20h de Segunda-Feira a Domingo</span>
-                    </div>
-                    <div className="footerItem">
-                        <img src={marketIcon} alt="SNES Icon" width={16} height={16} />
-                        <span>Rua José Campos, Numero 190, Jardim Atlântico, Balneario Arroio do Silva/SC - CEP 88914-000</span>
-                    </div>
-                    <div className="footerItem">
-                        <img src={phoneIcon} alt="SNES Icon" width={16} height={16} />
-                        <span>(48) 99941-9515</span>
-                    </div>
-                    <div className="footerItem">
-                        <img src={emailIcon} alt="SNES Icon" width={16} height={16} />
-                        <span>contato@retroxeletronics.com.br</span>
-                    </div>
-                </div>
-                <div className="footerDiv">
-                    <p>Redes Sociais</p>
-                    <br></br>
-                    <div className="socialFooter">
-                        <a href="https://www.facebook.com/retroxeletronics/" target="_blank" rel="noopener noreferrer">
-                            <FaFacebook size={30} />
-                        </a>
-                        <a href="https://www.instagram.com/retroxeletronics/" target="_blank" rel="noopener noreferrer">
-                            <FaInstagram size={30} />
-                        </a>
-                        <a href="https://www.instagram.com/retroxeletronics/" target="_blank" rel="noopener noreferrer">
-                            <IoLogoWhatsapp size={30} />
-                        </a>
-                    </div>
-
-                </div>
-                <div className="footerDiv">
-                    <p>Links Uteis</p>
-                    <div>
-                        <a>Termos e Condições</a>
-                    </div>
-                    <div>
-                        <a>Politica de Cookies</a>
-                    </div>
-                </div>
-            </footer>
-        )
+const categories = [
+    {
+        label: 'Help',
+        subcategories: [
+            {
+                subcategoryLabel: 'Retro Bot',
+                link: '#',
+            },
+            {
+                subcategoryLabel: 'Software Download',
+                link: '#',
+            },    
+            {
+                subcategoryLabel: 'Work with Us',
+                link: '#',
+            },
+        ],
+    },
+    {
+        label: 'Legal Mentions',
+        subcategories: [
+            {
+                subcategoryLabel: 'Troca e Devolução',
+                link: '#',
+            },
+            {
+                subcategoryLabel: 'Privacy Policy',
+                link: '#',
+            },
+            {
+                subcategoryLabel: 'Cookies',
+                link: '#',
+            }
+        ],
+    },
+    {
+        label: 'About',
+        subcategories: [
+            {
+                subcategoryLabel: 'About Us',
+                link: '#',
+            },
+            {
+                subcategoryLabel: 'Contact Us',
+                link: '#',
+            },
+            {
+                subcategoryLabel: 'FAQ',
+                link: '#',
+            }
+        ],
     }
+];
+const socialMedia = [
+    {
+        label: 'Facebook',
+        link: '#',
+        icon: () => <SfIconFacebook />,
+    },
+    {
+        label: 'Instagram',
+        link: '#',
+        icon: () => <SfIconInstagram />,
+    },
+    {
+        label: 'Youtube',
+        link: '#',
+        icon: () => <SfIconYoutube />,
+    },
+];
+const bottomLinks = [
+    {
+        label: 'Terms',
+        link: '#',
+    },
+    {
+        label: 'Privacy policy',
+        link: '#',
+    },
+];
+export default function Footer() {
+    return (
+        <footer className="pt-10 bg-neutral-100">
+            <div className="grid justify-center grid-cols-[1fr_1fr] md:grid-cols-[repeat(3,1fr)] px-3 md:px-6 pb-10 max-w-[1536px] mx-auto">
+                {categories.map(({ label, subcategories }) => (
+                    <ul className="grid grid-cols xs:pb-4" key={label}>
+                        <li className="ml-4 text-lg font-medium leading-7 text-neutral-900 font-body">{label}</li>
+                        {subcategories?.map(({ subcategoryLabel, link }) => (
+                            <SfListItem className="py-2 !bg-transparent typography-text-sm font-body" key={subcategoryLabel}>
+                                <SfLink
+                                    className="no-underline text-neutral-600 hover:underline hover:!text-neutral-900 active:underline active:!text-neutral-900"
+                                    variant="secondary"
+                                    href={link}
+                                >
+                                    {subcategoryLabel}
+                                </SfLink>
+                            </SfListItem>
+                        ))}
+                    </ul>
+                ))}
+            </div>
+            <hr />
+            <div className="bg-[#8c000f] justify-center grid-cols-[1fr_1fr] md:grid-cols-[repeat(3,1fr)] px-3 md:px-2 pb-2">
+                <div className="flex justify-center py-2 gap-x-4 md:self-start">
+                    {socialMedia.map(({ icon: Icon, label, link }) => (
+                        <SfButton
+                            key={label}
+                            square
+                            as="a"
+                            variant="tertiary"
+                            className="text-white hover:text-[#8c000f] hover:!bg-white"
+                            href={link}
+                            aria-label={`Go to ${label} page`}
+                        >
+                            <Icon />
+                        </SfButton>
+                    ))}
+                </div>
+            </div>
+        </footer>
+    );
 }
-
-export default Footer

@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { Flex, Card, Image, Stack, Heading, Text, Divider, ButtonGroup, Button, CardBody, CardFooter } from '@chakra-ui/react';
 import './styles.css';
 
-export default function NewCard() {
+export default function SalesCard() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/products/new')
+        fetch('http://localhost:3000/products/sales')
             .then(response => response.json())
             .then(data => setProducts(data))
             .catch(error => console.error('Error fetching sales products:', error));
@@ -15,7 +15,7 @@ export default function NewCard() {
     return (
         <>
             <div className="Destaque">
-                <Text>NEW</Text>
+                <Text>SALES</Text>
             </div>
             <Flex justifyContent="space-between" alignItems="center" flexWrap="wrap">
                 {products.map(product => (

@@ -2,27 +2,27 @@
 
 .Navbar {
     display: flex;
-    padding: 16px;
-    color: #FDFEFFff;
-    border-top: 1px solid #FDFEFFff;
+    color: "black";
+    border-top: 1px solid #8c000f;
     position: relative;
-    background-color: #0070E9ff;
+    background-color: #8c000f;
     /* Adicionando posição relativa ao Navbar para controlar o z-index do dropdown */
 }
 
 
 .Navbar-bg {
     display: flex;
-    padding: 16px;
-    color: #FDFEFFff;
-    border-top: 1px solid #FDFEFFff;
+    justify-content: center;
+    align-items: center;
+    color: "black";
+    border-top: 1px solid #8c000f;
     position: sticky;
     /* Alterando para position: sticky */
     top: 0;
     /* Fixando no topo */
-    z-index: 1000;
+    z-index: 2;
     /* Ajustando o z-index para garantir que fique acima dos outros elementos */
-    background-color: #0070E9ff;
+    background-color: #8c000f;
 }
 
 .Navbar-hidde {
@@ -34,14 +34,13 @@
     overflow: hidden;
     padding-right: 8px;
     margin: 5px;
-    border-right: 2px solid #FDFEFFff;
+    border-right: 2px solid black;
     transition: color 0.3s ease;
     /* Adicionando transição de cor */
 }
 
 .NavbarLink:hover {
-    color: #FDFEFFff;
-    font-weight: bold;
+    color: #f6ba25;
     /* Invertendo a cor ao passar o mouse */
     cursor: pointer;
     /* Mudando o cursor ao passar o mouse */
@@ -49,7 +48,8 @@
 
 .DropdownLinks {
     position: absolute;
-    background-color: #0070E9ff;
+    background-color: #dee8f3;
+    color: #8c000f;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(2, 2, 2, 2);
     z-index: 100;
@@ -62,7 +62,8 @@
 }
 
 .DropdownItem:hover {
-    background-color: #D52900ff;
+    background-color: #8c000f;
+    color: #dee8f3;
     transition: 0.5s;
 }
 
@@ -74,7 +75,7 @@
 /* Adicionando filtro azul aos itens do dropdown */
 .DropdownLinks div {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #aba798;
     /* Adicionando uma borda inferior para separar os links */
 }
 
@@ -92,6 +93,8 @@
 
 .NavbarItems {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .NavbarItemsRight {
@@ -103,28 +106,33 @@
 }
 
 .NavbarComplet {
-    background-color: #0070E9ff;
+    background-color: #8c000f;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #FDFEFFff;
-    margin-left: 33vh;
+    color: black;
+    margin-left: 10vh;
 }
-.SearchDivBar{
+
+.SearchDivBar {
     display: flex;
     align-items: center;
 }
-.SearchInputBar{
+
+.SearchInputBar {
     border: 1px solid black;
     align-items: center;
     border-radius: 20px;
     padding: 8px 16px;
+    width: 100%;
+    /* Ajuste o valor conforme desejado */
 }
 
 .cartBar {
     display: flex;
     align-items: center;
-    margin-left: 33vh; /* Adicionando um espaçamento à direita para separar do próximo elemento */
+    margin-left: 33vh;
+    /* Adicionando um espaçamento à direita para separar do próximo elemento */
 }
 
 .cartPriceBar {
@@ -132,7 +140,8 @@
 }
 
 .ProfileBar {
-    margin-left: 20px; /* Adicionando um espaçamento à esquerda para separar do próximo elemento */
+    margin-left: 20px;
+    /* Adicionando um espaçamento à esquerda para separar do próximo elemento */
     margin-right: 20px
 }
 
@@ -162,5 +171,26 @@
         display: initial;
         position: absolute;
         cursor: pointer;
+    }
+
+    .NavbarLink {
+        position: static;
+        /* Reinicia a posição do item do menu para seu comportamento padrão */
+    }
+
+    .DropdownLinks {
+        position: static;
+        /* Reinicia a posição do dropdown para seu comportamento padrão */
+        width: 100%;
+        /* Ocupa toda a largura do container pai */
+        box-shadow: none;
+        /* Remove a sombra do dropdown */
+        background-color: transparent;
+        /* Define o fundo transparente para o dropdown */
+    }
+
+    .DropdownLinks div {
+        border-bottom: none;
+        /* Remove a borda inferior dos itens do dropdown */
     }
 }
