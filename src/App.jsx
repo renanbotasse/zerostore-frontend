@@ -1,11 +1,11 @@
 import Home from './pages/home/index'
 import Item from './pages/item/index'
-import './index.css';
 import { ChakraProvider } from '@chakra-ui/react'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import './globals.css';
 
 
 function App() {
