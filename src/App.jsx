@@ -1,5 +1,8 @@
 import Home from './pages/home/index'
-import Item from './pages/item/index'
+import About from './pages/about/index'
+import Contact from './pages/contact/index'
+import Faq from './pages/faq/index'
+import LegalMentions from './pages/legalMentions'
 import { ChakraProvider } from '@chakra-ui/react'
 import {
   createBrowserRouter,
@@ -15,8 +18,20 @@ function App() {
       element: <Home/>,
     },
     {
-      path: "/item",
-      element: <Item/>,
+      path: "/about",
+      element: <About/>,
+    },
+    {
+      path: "/contact",
+      element: <Contact/>,
+    },
+    {
+      path: "/faq",
+      element: <Faq/>,
+    },
+    {
+      path: "/legal-mentions",
+      element: <LegalMentions/>,
     },
   ]);
   return (
