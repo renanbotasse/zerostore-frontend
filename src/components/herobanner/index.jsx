@@ -2,12 +2,12 @@ import { SfButton } from '@storefront-ui/react';
 
 export default function Hero() {
     return (
-        <div className="relative min-h-[576px] bg-neutral-100">
+        <div className="relative min-h-[576px] bg-neutral-100 z-[-2]">
             <picture>
                 <source srcSet="https://i.ibb.co/BCpB944/astronout.png" media="(min-width: 768px)" />
                 <img
                     src="https://i.ibb.co/BCpB944/astronout.png"
-                    className="absolute w-full h-full z-[1] object-cover"
+                    className="absolute w-full h-full z-[-1] object-cover"
                 />
             </picture>
             <div className="md:flex md:flex-row-reverse md:justify-center min-h-[576px] max-w-[1536px] mx-auto">

@@ -1,15 +1,13 @@
 import Footer from '../../components/footer/index'
-import DisplayHorizontalBlock from "../../components/banner";
-import Hero from "../../components/herobanner/index"
 import NavBar from '../../components/navbar';
+import ContactUs from '../../components/contactus';
 import '../../globals.css';
 
-export default function Home() {
+export default function Contact() {
     return (
         <div>
             <NavBar/>
-            <Hero/>
-            <DisplayHorizontalBlock/>
+            <ContactUs/>
             <Footer />
         </div>
     );

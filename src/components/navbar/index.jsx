@@ -30,7 +30,7 @@ import aboutIcon from '../../assets/ABOUT.png';
 import newgameIcon from '../../assets/newgameIcon.png';
 import homebrewIcon from '../../assets/homebrewIcon.png';
 import accessoriesIcon from '../../assets/accessoriesIcon.png';
-import ayaneoIcon from '../../assets/ayneoIcon.png'
+import ayaneoIcon from '../../assets/ayneoIcon.png';
 
 const actionItems = [
     {
@@ -165,21 +165,20 @@ const categoriesContent = [
             {
                 title: 'About Us',
                 icon: aboutIcon,
-                link: '#',
+                link: '/about',
             },
             {
                 title: 'Contact Us',
                 icon: contactIcon,
-                link: '#',
+                link: '/contact',
             },
             {
                 title: 'FAQ',
                 icon: faqIcon,
-                link: '#',
+                link: '/faq',
             }
         ],
     },
-
 ];
 
 export default function BaseMegaMenu() {
@@ -203,8 +202,8 @@ export default function BaseMegaMenu() {
     };
 
     return (
-        <div className="w-full h-full fixed z-[2]">
-            {isOpen && <div className="fixed inset-0 bg-[#8c790048] bg-opacity-50 transition-opacity" />}
+        <div className="w-full fixed z-[10]">
+            {isOpen && <div className="fixed inset-0 bg-[#8c790048] bg-opacity-50 z-[9] transition-opacity" />}
             <header
                 ref={menuRef}
                 className="flex flex-wrap md:flex-nowrap justify-center w-full py-2 md:py-5 border-0 bg-[#8c000f] border-neutral-200 md:relative md:z-10"
@@ -221,7 +220,7 @@ export default function BaseMegaMenu() {
                         <SfIconMenu className=" text-white" />
                     </SfButton>
                     <a
-                        href="#"
+                        href="/"
                         aria-label="SF Homepage"
                         className="flex shrink-0 ml-4 md:ml-0 mr-2 md:mr-10 text-white focus-visible:outline focus-visible:outline-offset focus-visible:rounded-sm"
                     >
@@ -265,7 +264,7 @@ export default function BaseMegaMenu() {
                                         placement="top"
                                         className="grid grid-cols-1 md:gap-x-1 md:grid-cols-5 bg-white shadow-lg p-0 max-h-screen overflow-y-auto md:!absolute md:!top-20 max-w-[376px] md:max-w-full md:p-6 mr-[50px] md:mr-0"
                                     >
-                                <div className="sticky top-0 flex items-center justify-between px-4 py-2 md:hidden bg-[#8c000f] ">
+                                        <div className="sticky top-0 flex items-center justify-between px-4 py-2 md:hidden bg-[#8c000f]">
                                             <div className="flex items-center font-medium text-white typography-text-lg">Browse products</div>
                                             <SfButton
                                                 square
@@ -278,7 +277,7 @@ export default function BaseMegaMenu() {
                                             </SfButton>
                                         </div>
                                         {categoriesContent.map(({ heading, items }) => (
-                                            <div key={heading} className="[&:nth-child(2)]:pt-0 pt-6 md:pt-0 ">
+                                            <div key={heading} className="[&:nth-child(2)]:pt-0 pt-6 md:pt-0">
                                                 <h2
                                                     role="presentation"
                                                     className="typography-text-base font-bold text-neutral-900 whitespace-nowrap p-4 md:py-1.5 items-center"
@@ -291,7 +290,7 @@ export default function BaseMegaMenu() {
                                                         <li key={item.title} className="flex col-auto items-center hover:bg-red-800 hover:text-white">
                                                             <img
                                                                 src={item.icon}
-                                                                alt="Sf Logo"a
+                                                                alt="Sf Logo"
                                                                 className="flex w-8 h-8 lg:w-[1.75rem] lg:h-[1.75rem] hover:bg-red-800 hover:text-white"
                                                             />
                                                             <SfListItem
@@ -389,7 +388,7 @@ export default function BaseMegaMenu() {
                                     className="rounded-l-none hover:bg-transparent active:bg-transparent"
                                 >
                                     <SfIconSearch className="text-black" />
-                                </SfButton >
+                                </SfButton>
                             </span>
                         }
                         onChange={(event) => setInputValue(event.target.value)}
