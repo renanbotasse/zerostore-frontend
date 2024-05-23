@@ -2,6 +2,7 @@ import Home from './pages/home/index'
 import About from './pages/about/index'
 import Contact from './pages/contact/index'
 import Faq from './pages/faq/index'
+import Filters from './pages/filter/index'
 import LegalMentions from './pages/legalMentions'
 import { ChakraProvider } from '@chakra-ui/react'
 import {
@@ -32,6 +33,10 @@ function App() {
     {
       path: "/legal-mentions",
       element: <LegalMentions/>,
+    },
+    {
+      path: "/filter",
+      element: <Filters/>,
     },
   ]);
   return (

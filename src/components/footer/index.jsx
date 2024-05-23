@@ -105,7 +105,7 @@ export default function Footer() {
                 ))}
             </div>
             <hr />
-            <div className="bg-[#8c000f] justify-center grid-cols-[1fr_1fr] md:grid-cols-[repeat(3,1fr)] px-3 md:px-2 pb-4">
+            <div className="c000f] justify-center grid-cols-[1fr_1fr] md:grid-cols-[repeat(3,1fr)] px-3 md:px-2 pb-4">
                 <div className="flex justify-center py-2 gap-x-4 md:self-start">
                     {socialMedia.map(({ icon: Icon, label, link }) => (
                         <SfButton
