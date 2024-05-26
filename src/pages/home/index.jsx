@@ -1,4 +1,4 @@
-import Footer from '../../components/footer/index'
+import Footer from '../../components/footer/index.tsx'
 import DisplayHorizontalBlock from "../../components/banner";
 import Hero from "../../components/herobanner/index"
 import NavBar from '../../components/navbar';
