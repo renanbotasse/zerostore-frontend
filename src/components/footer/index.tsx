@@ -11,6 +11,7 @@ import {
     SfLink,
     SfListItem,
 } from '@storefront-ui/react';
+import React from 'react';
 
 const categories = [
     {
@@ -83,7 +84,7 @@ const socialMedia = [
     },
 ];
 
-export default function Footer() {
+const Footer: React.FC = () => {
     return (
         <footer className="pt-10 bg-neutral-100 z-[1]">
             <div className="grid justify-center grid-cols-[1fr_1fr] md:grid-cols-[repeat(3,1fr)] px-3 md:px-6 pb-10 max-w-[1536px] mx-auto ">
@@ -125,3 +126,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+export default Footer;

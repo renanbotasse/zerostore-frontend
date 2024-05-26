@@ -31,6 +31,9 @@ import newgameIcon from '../../assets/newgameIcon.png';
 import homebrewIcon from '../../assets/homebrewIcon.png';
 import accessoriesIcon from '../../assets/accessoriesIcon.png';
 import ayaneoIcon from '../../assets/ayneoIcon.png';
+import { useDispatch } from 'react-redux';
+import { filterRedux } from '../../store/slices/filtersSlice/index'; // Importe a ação do slice de Redux
+import { useNavigate } from 'react-router-dom';
 
 const actionItems = [
     {
@@ -65,32 +68,56 @@ const categoriesContent = [
             {
                 title: "SUPER NINTENDO",
                 icon: snesIcon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "SNES",
+                    product_type: 'game',
+                },
+                link: '/filter',
             },
             {
                 title: 'NINTENDO',
                 icon: nesIcon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "NES",
+                    product_type: 'game',
+                },
+                link: '/filter',
             },
             {
                 title: 'MEGA DRIVE',
                 icon: megaIcon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "MEGA",
+                    product_type: 'game',
+                },
+                link: '/filter',
             },
             {
                 title: 'MASTER SYSTEM',
                 icon: masterIcon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "MASTER",
+                    product_type: 'game',
+                },
+                link: '/filter',
             },
             {
                 title: 'PSX',
                 icon: psxIcon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "PSX",
+                    product_type: 'game',
+                },
+                link: '/filter',
             },
             {
                 title: 'N64',
                 icon: n64Icon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "N64",
+                    product_type: 'game',
+                },
+                link: '/filter',
             },
         ],
     },
@@ -100,32 +127,56 @@ const categoriesContent = [
             {
                 title: "SUPER NINTENDO",
                 icon: snesIcon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "SNES",
+                    product_type: 'console',
+                },
+                link: '/filter',
             },
             {
                 title: 'NINTENDO',
                 icon: nesIcon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "NES",
+                    product_type: 'console',
+                },
+                link: '/filter',
             },
             {
                 title: 'MEGA DRIVE',
                 icon: megaIcon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "MEGA",
+                    product_type: 'console',
+                },
+                link: '/filter',
             },
             {
                 title: 'MASTER SYSTEM',
                 icon: masterIcon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "MASTER",
+                    product_type: 'console',
+                },
+                link: '/filter',
             },
             {
                 title: 'PSX',
                 icon: psxIcon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "PSX",
+                    product_type: 'console',
+                },
+                link: '/filter',
             },
             {
                 title: 'N64',
                 icon: n64Icon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "N64",
+                    product_type: 'console',
+                },
+                link: '/filter',
             },
         ],
     },
@@ -135,27 +186,37 @@ const categoriesContent = [
             {
                 title: 'Sales',
                 icon: salesIcon,
-                link: '#',
+                link: '/sales',
             },
             {
                 title: 'HomeBrew',
                 icon: homebrewIcon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "HOME",
+                },
+                link: '/filter',
             },
             {
                 title: 'New Games',
                 icon: newgameIcon,
-                link: '#',
+                link: '/new',
             },
             {
                 title: 'Accessories',
                 icon: accessoriesIcon,
-                link: '#',
+                filterRedux: {
+                    product_type: 'accessories',
+                },
+                link: '/filter',
             },
             {
                 title: 'AYNEO',
                 icon: ayaneoIcon,
-                link: '#',
+                filterRedux: {
+                    product_platform: "AYNEO",
+                    product_type: 'console',
+                },
+                link: '/filter',
             },
         ],
     },
@@ -199,6 +260,31 @@ export default function BaseMegaMenu() {
     const search = (event) => {
         event.preventDefault();
         alert(`Successfully found 10 results for ${inputValue}`);
+    };
+
+    const dispatch = useDispatch();
+    const navigateTo = useNavigate(); // 
+    
+    const handleFilterClick = (filterData) => {
+        // Verifica se filterRedux está presente em filterData
+        if (filterData.filterRedux) {
+            dispatch(filterRedux({ // Use a ação do slice de Redux
+                product_platform: filterData.filterRedux.product_platform || null,
+                product_sales: filterData.filterRedux.product_sales || null,
+                product_new: filterData.filterRedux.product_new || null,
+                product_type: filterData.filterRedux.product_type || null
+            }));
+        } else {
+            // Se filterRedux não estiver presente, defina todos os valores como null
+            dispatch(filterRedux({
+                product_platform: null,
+                product_sales: null,
+                product_new: null,
+                product_type: null
+            }));
+        }
+        // Update the URL without using useHistory
+        navigateTo(`${filterData.link}`);
     };
 
     return (
@@ -297,7 +383,7 @@ export default function BaseMegaMenu() {
                                                                 as="a"
                                                                 size="sm"
                                                                 role="none"
-                                                                href={item.link}
+                                                                onClick={() => handleFilterClick(item)}
                                                                 className="items-center py-4 md:py-2 hover:bg-red-800 hover:text-white font-bold"
                                                             >
                                                                 {item.title}
