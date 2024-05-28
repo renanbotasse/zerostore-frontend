@@ -1,13 +1,13 @@
-import Footer from '../../components/footer/index'
+import Footer from '../../components/footer'
 import NavBarTop from '../../components/navBarTop';
-import AboutUs from '../../components/about-us';
+import ProductDetail from '../../components/productDetail';
 import '../../globals.css';
 
-export default function About() {
+export default function ProductDetails() {
     return (
         <div>
             <NavBarTop/>
-            <AboutUs/>
+            <ProductDetail/>
             <Footer />
         </div>
     );

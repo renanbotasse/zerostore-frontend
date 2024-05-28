@@ -6,6 +6,7 @@ import Filters from './pages/filter/index'
 import LegalMentions from './pages/legalMentions'
 import Sales from './pages/sales'
 import ProductNew from './pages/productNew'
+import ProductDetails from './pages/productDetail'
 
 import { ChakraProvider } from '@chakra-ui/react'
 import {
@@ -47,6 +48,10 @@ function App() {
     {
       path: "/new",
       element: <ProductNew/>,
+    },
+    {
+      path: "/product-detail",
+      element: <ProductDetails/>,
     },
   ]);
   return (
