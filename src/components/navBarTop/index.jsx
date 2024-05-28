@@ -69,7 +69,7 @@ export default function NavBarTop() {
             {isOpen && <div className="fixed inset-0 bg-[#8c790048] bg-opacity-50 z-[9] transition-opacity" />}
             <header
                 ref={menuRef}
-                className="flex flex-wrap md:flex-nowrap justify-center w-full py-2 md:py-5 border-0 bg-[#8c000f] border-neutral-200 md:relative md:z-10"
+                className="flex flex-wrap md:flex-nowrap justify-center w-full py-2 md:py-5 border-0 bg-[#8a202b] border-neutral-200 md:relative md:z-10"
             >
                 <div className="flex items-center justify-start h-full max-w-[1536px] w-full px-4 md:px-10">
                     <SfButton

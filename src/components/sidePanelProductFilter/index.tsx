@@ -1,5 +1,5 @@
 import ProductCard from '../productCard/index.js';
-import Footer from '../footer/index.js';
+import { SfScrollable } from '@storefront-ui/react';
 
 import { Fragment, useState, useEffect } from 'react';
 import {
@@ -45,15 +45,16 @@ export default function SidePanelProductFilter() {
     }, []);
 
     // LOGICA - REQUEST
-    const fetchFilteredProducts = () => {
+    const fetchFilteredProducts = async () => {
         const baseUrl = 'http://localhost:3000/products';
-        fetch(baseUrl)
-            .then(response => response.json())
-            .then(data => {
-                setAllProducts(data);
-                applyFilters(data);
-            })
-            .catch(error => console.error('Error fetching products:', error));
+        try {
+            const response = await fetch(baseUrl);
+            const data = await response.json();
+            setAllProducts(data);
+            applyFilters(data);
+        } catch (error) {
+            console.error('Error fetching products:', error);
+        }
     };
 
     // SELEÇÃO DE CATEGORIAS, FILTROS E STATUS
@@ -73,7 +74,7 @@ export default function SidePanelProductFilter() {
     const handleClearFilters = () => {
         setSelectedPlatform(null);
         setSelectedCategory(null);
-        fetchFilteredProducts();
+        applyFilters(allProducts); // Aplicar filtros com todos os produtos
     };
 
     // FILTROS ATUALIZAM REDUX
@@ -217,10 +218,18 @@ export default function SidePanelProductFilter() {
                             Clear Filters
                         </SfButton>
                     </div>
-                    <Footer />
                 </aside>
-                <ProductCard products={products} />
+                <div className="flex flex-wrap overflow-y-auto max-h-[100vh] md:max-h-[100vh] max-w-full">
+                    {products.map((product, i) => (
+                        <div
+                            key={i}
+                            className=" mt-40 ml-4 flex items-center justify-center text-gray-500 border border-dashed w-[400px] h-[400px] shrink-0 bg-neutral-100 border-negative-300"
+                        >
+                            <ProductCard product={product} /> {/* Passa um único produto */}
+                        </div>
+                    ))}
+                </div>
             </div>
-        </>
+     </>
     );
 }
