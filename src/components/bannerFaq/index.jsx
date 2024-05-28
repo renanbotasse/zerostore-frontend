@@ -1,4 +1,4 @@
-export default function FaqBanner() {
+export default function BannerFaq() {
     return (
         <div className="relative bg-neutral-100">
             <div className="container mx-auto px-4 py-8 md:py-16 flex flex-col md:flex-row">
@@ -12,7 +12,6 @@ export default function FaqBanner() {
                         />
                     </picture>
                 </div>
-                
                 <div className="w-full md:w-1/2 flex flex-col justify-center">
                     <div className="px-4 md:px-0">
                         <p className="text-4xl font-bold text-black uppercase mb-6">

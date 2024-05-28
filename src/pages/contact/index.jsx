@@ -1,12 +1,12 @@
 import Footer from '../../components/footer/index'
-import NavBar from '../../components/navbar';
-import ContactUs from '../../components/contactus';
+import NavBarTop from '../../components/navBarTop';
+import ContactUs from '../../components/contactUs';
 import '../../globals.css';
 
 export default function Contact() {
     return (
         <div>
-            <NavBar/>
+            <NavBarTop/>
             <ContactUs/>
             <Footer />
         </div>

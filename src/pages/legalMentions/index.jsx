@@ -1,12 +1,12 @@
 import Footer from '../../components/footer/index'
-import NavBar from '../../components/navbar';
+import NavBarTop from '../../components/navBarTop';
 import BannerLegal from '../../components/bannerLegal';
 import '../../globals.css';
 
 export default function LegalMentions() {
     return (
         <div>
-            <NavBar />
+            <NavBarTop />
             <BannerLegal />
             <Footer />
         </div>
