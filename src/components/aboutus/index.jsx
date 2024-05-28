@@ -23,7 +23,7 @@ export default function AboutUs() {
                         Focused on discovering new gems, the zero game of the year competition creates opportunities for gamers to find the best used games, both nationally and internationally, every year.
                     </p>
                     <p className="text-white text-xl mt-3 text-justify">
-                        We work with a wide range of platforms, including: <br></br> 
+                        We work with a wide range of platforms, including: <br></br>
                         Nintendo Entertainment System (NES); Super Nintendo Entertainment System (SNES); Master System; Mega Drive, Playstation; Nintendo6 and others.
                     </p>
                 </div>

@@ -1,4 +1,4 @@
-import FormFields from '../contactform/index';
+import FormContact from '../formContact/index';
 
 export default function ContactUs() {
     return (
@@ -17,23 +17,23 @@ export default function ContactUs() {
                             CONTACT US
                         </p>
                         <h1 className="text-white text-2xl md:leading-[40px] font-bold mt-2 mb-2">
-                        Customer Service Hours
+                            Customer Service Hours
                         </h1>
                         <p className="text-white text-xl text-justify mt-2 mb-2">
                             Monday to Friday from 8h00 to 20h00.
                             <br></br>
                             Saturday from 09h00 to 18h00.
                             <h1 className="text-white text-2xl md:leading-[40px] font-bold mt-4 mb-2">
-                            Can't find what you're looking for on the website?
+                                Can't find what you're looking for on the website?
                             </h1>
                             <p className="text-white text-xl text-justify">
-                            Contact us on WhatsApp (XXXXXXXXXXXXX) or email us at contact@zsstore.com
+                                Contact us on WhatsApp (XXXXXXXXXXXXX) or email us at contact@zsstore.com
                             </p>
                         </p>
                     </div>
                 </div>
             </div>
-            <FormFields />
+            <FormContact />
         </div>
     );
 }

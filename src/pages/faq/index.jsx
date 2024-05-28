@@ -1,15 +1,15 @@
 import Footer from '../../components/footer/index'
-import NavBar from '../../components/navbar';
-import ComponentFaq from '../../components/componentFaq/index';
-import FaqBanner from '../../components/bannerFaq/index';
+import NavBarTop from '../../components/navBarTop';
+import AccordionFaq from '../../components/accordionFaq/index';
+import BannerFaq from '../../components/bannerFaq/index';
 import '../../globals.css';
 
 export default function Faq() {
     return (
         <div>
-            <NavBar />
-            <FaqBanner/>
-            <ComponentFaq/>
+            <NavBarTop />
+            <BannerFaq/>
+            <AccordionFaq/>
             <Footer />
         </div>
     );

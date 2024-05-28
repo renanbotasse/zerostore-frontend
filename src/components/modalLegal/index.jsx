@@ -10,7 +10,6 @@ export default function ModalLegal({ isOpen, onClose, content }) {
 
     return (
         <div className="z-10">
-            {/* Backdrop */}
             <CSSTransition
                 in={isOpen}
                 nodeRef={backdropRef}
@@ -24,8 +23,6 @@ export default function ModalLegal({ isOpen, onClose, content }) {
             >
                 <div ref={backdropRef} className="fixed inset-0 bg-neutral-700 bg-opacity-50" />
             </CSSTransition>
-
-            {/* Modal */}
             <CSSTransition
                 in={isOpen}
                 nodeRef={modalRef}

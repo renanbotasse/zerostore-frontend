@@ -1,12 +1,12 @@
 import Footer from '../../components/footer/index'
-import NavBar from '../../components/navbar';
-import AboutUs from '../../components/aboutus';
+import NavBarTop from '../../components/navBarTop';
+import AboutUs from '../../components/aboutUs';
 import '../../globals.css';
 
 export default function About() {
     return (
         <div>
-            <NavBar/>
+            <NavBarTop/>
             <AboutUs/>
             <Footer />
         </div>

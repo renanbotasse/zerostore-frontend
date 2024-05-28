@@ -1,4 +1,4 @@
-import Home from './pages/home/index'
+import Landing from './pages/landing/index'
 import About from './pages/about/index'
 import Contact from './pages/contact/index'
 import Faq from './pages/faq/index'
@@ -11,12 +11,11 @@ import {
 } from "react-router-dom";
 import './globals.css';
 
-
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home/>,
+      element: <Landing/>,
     },
     {
       path: "/about",
