@@ -1,5 +1,6 @@
 import NavBarTop from '../../components/navBarTop';
 import SidePanelProductFilter from '../../components/sidePanelProductFilter/index';
+import Footer from '../../components/footer';
 import '../../globals.css';
 
 export default function Filters() {
@@ -7,6 +8,7 @@ export default function Filters() {
         <div>
             <NavBarTop />
             <SidePanelProductFilter/>
+            <Footer />
         </div>
     );
 }

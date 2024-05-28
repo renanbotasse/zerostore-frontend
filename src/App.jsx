@@ -4,6 +4,9 @@ import Contact from './pages/contact/index'
 import Faq from './pages/faq/index'
 import Filters from './pages/filter/index'
 import LegalMentions from './pages/legalMentions'
+import Sales from './pages/sales'
+import ProductNew from './pages/productNew'
+
 import { ChakraProvider } from '@chakra-ui/react'
 import {
   createBrowserRouter,
@@ -36,6 +39,14 @@ function App() {
     {
       path: "/filter",
       element: <Filters/>,
+    },
+    {
+      path: "/sales",
+      element: <Sales/>,
+    },
+    {
+      path: "/new",
+      element: <ProductNew/>,
     },
   ]);
   return (
