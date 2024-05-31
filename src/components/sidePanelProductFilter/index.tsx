@@ -223,7 +223,7 @@ export default function SidePanelProductFilter() {
                     {products.map((product, i) => (
                         <div
                             key={i}
-                            className=" mt-40 ml-4 flex items-center justify-center text-gray-500 border border-dashed w-[400px] h-[400px] shrink-0 bg-neutral-100 border-negative-300"
+                            className=" mt-40 ml-4 flex items-center justify-center text-gray-500 border border-dashed w-[250px] h-[250px] shrink-0 bg-neutral-100 border-negative-300"
                         >
                             <ProductCard product={product} /> {/* Passa um único produto */}
                         </div>

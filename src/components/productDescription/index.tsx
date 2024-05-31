@@ -87,7 +87,7 @@ export default function ProductDescription() {
                             </SfButton>
                         </div>
                         <p className="self-center mt-1 mb-4 text-xs text-neutral-500 xs:mb-0">
-                            <strong className="text-neutral-900">{product.product_available}</strong> in stock
+                            <strong className="text-neutral-900">{product.product_quantity}</strong> in stock
                         </p>
                     </div>
                     <SfButton size="lg" className="w-full xs:ml-4" slotPrefix={<SfIconShoppingCart size="sm" />}>

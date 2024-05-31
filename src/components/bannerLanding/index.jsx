@@ -11,13 +11,20 @@ const BannerLanding = () => {
     const navigateTo = useNavigate();
 
     const handleFilterClick = (filterData) => {
-        dispatch(filterRedux({
-            product_platform: null,
-            product_sales: filterData.product_sale,
-            product_new: filterData.product_new,
-            product_type: filterData.product_type
-        }));
-        navigateTo('/filter');
+        if (filterData.product_type == 'CONSOLE' || filterData.product_type == 'GAME')
+            {
+                dispatch(filterRedux({
+                    product_type: filterData.product_type
+                }));
+                navigateTo('/filter');
+            }
+        else if (filterData.product_status == "SALES")
+            {
+                navigateTo('/sales');
+            }
+        else{
+            navigateTo('/new');
+        }
     };
 
     return (

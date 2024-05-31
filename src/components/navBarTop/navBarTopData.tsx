@@ -55,7 +55,7 @@ export const categoriesContent = [
                 icon: snesIcon,
                 filterRedux: {
                     product_platform: "SNES",
-                    product_type: 'game',
+                    product_type: 'GAME',
                 },
                 link: '/filter',
             },
@@ -64,16 +64,16 @@ export const categoriesContent = [
                 icon: nesIcon,
                 filterRedux: {
                     product_platform: "NES",
-                    product_type: 'game',
+                    product_type: 'GAME',
                 },
                 link: '/filter',
             },
             {
-                title: 'MEGA DRIVE',
+                title: 'GENESIS',
                 icon: megaIcon,
                 filterRedux: {
-                    product_platform: "MEGA",
-                    product_type: 'game',
+                    product_platform: "GENESIS",
+                    product_type: 'GAME',
                 },
                 link: '/filter',
             },
@@ -82,7 +82,7 @@ export const categoriesContent = [
                 icon: masterIcon,
                 filterRedux: {
                     product_platform: "MASTER",
-                    product_type: 'game',
+                    product_type: 'GAME',
                 },
                 link: '/filter',
             },
@@ -91,7 +91,7 @@ export const categoriesContent = [
                 icon: psxIcon,
                 filterRedux: {
                     product_platform: "PSX",
-                    product_type: 'game',
+                    product_type: 'GAME',
                 },
                 link: '/filter',
             },
@@ -100,7 +100,7 @@ export const categoriesContent = [
                 icon: n64Icon,
                 filterRedux: {
                     product_platform: "N64",
-                    product_type: 'game',
+                    product_type: 'GAME',
                 },
                 link: '/filter',
             },
@@ -114,7 +114,7 @@ export const categoriesContent = [
                 icon: snesIcon,
                 filterRedux: {
                     product_platform: "SNES",
-                    product_type: 'console',
+                    product_type: 'CONSOLE',
                 },
                 link: '/filter',
             },
@@ -123,16 +123,16 @@ export const categoriesContent = [
                 icon: nesIcon,
                 filterRedux: {
                     product_platform: "NES",
-                    product_type: 'console',
+                    product_type: 'CONSOLE',
                 },
                 link: '/filter',
             },
             {
-                title: 'MEGA DRIVE',
+                title: 'GENESIS',
                 icon: megaIcon,
                 filterRedux: {
-                    product_platform: "MEGA",
-                    product_type: 'console',
+                    product_platform: "GENESIS",
+                    product_type: 'CONSOLE',
                 },
                 link: '/filter',
             },
@@ -141,7 +141,7 @@ export const categoriesContent = [
                 icon: masterIcon,
                 filterRedux: {
                     product_platform: "MASTER",
-                    product_type: 'console',
+                    product_type: 'CONSOLE',
                 },
                 link: '/filter',
             },
@@ -150,7 +150,7 @@ export const categoriesContent = [
                 icon: psxIcon,
                 filterRedux: {
                     product_platform: "PSX",
-                    product_type: 'console',
+                    product_type: 'CONSOLE',
                 },
                 link: '/filter',
             },
@@ -159,7 +159,7 @@ export const categoriesContent = [
                 icon: n64Icon,
                 filterRedux: {
                     product_platform: "N64",
-                    product_type: 'console',
+                    product_type: 'CONSOLE',
                 },
                 link: '/filter',
             },
@@ -190,7 +190,7 @@ export const categoriesContent = [
                 title: 'Accessories',
                 icon: accessoriesIcon,
                 filterRedux: {
-                    product_type: 'accessories',
+                    product_type: 'ACCESSORIES',
                 },
                 link: '/filter',
             },
@@ -199,7 +199,7 @@ export const categoriesContent = [
                 icon: ayaneoIcon,
                 filterRedux: {
                     product_platform: "AYNEO",
-                    product_type: 'console',
+                    product_type: 'CONSOLE',
                 },
                 link: '/filter',
             },

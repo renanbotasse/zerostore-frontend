@@ -20,9 +20,15 @@ export default function GalleryProduct() {
         { imageSrc: product.product_img[0], alt: product.product_name },
     ];
 
+    const getEmbedUrl = (product_video) => {
+        const videoId = product_video.split('/').pop();
+        return `https://www.youtube.com/embed/${videoId}`;
+    };
+
     const video = {
-        videoSrc: product.product_video, alt: product.product_name
-    }
+        video: getEmbedUrl(product.product_video),
+        alt: product.product_name
+    };
 
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -49,7 +55,8 @@ export default function GalleryProduct() {
                     <iframe
                         width="100%"
                         height="100%"
-                        src={`${video.videoSrc}/0.jpg`}
+                        src={video.video}
+
                         title={video.alt}
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

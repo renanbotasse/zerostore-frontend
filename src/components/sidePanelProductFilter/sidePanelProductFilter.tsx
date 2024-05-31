@@ -40,19 +40,19 @@ export const filtersData: Node[] = [
             {
                 id: 'CONSOLES',
                 label: 'Consoles',
-                value: 'console',
+                value: 'CONSOLE',
                 counter: 30,
             },
             {
                 id: 'SHOES',
                 label: 'Video Games',
-                value: 'game',
+                value: 'GAME',
                 counter: 28,
             },
             {
                 id: 'ACCESSORIES',
                 label: 'Accessories',
-                value: 'accessories',
+                value: 'ACCESSORIES',
                 counter: 56,
             }
         ],
@@ -65,7 +65,7 @@ export const filtersData: Node[] = [
             { id: 'platform1', label: 'HomeBrew', value: 'HOME' },
             { id: 'platform2', label: 'Super Nintendo', value: 'SNES' },
             { id: 'platform3', label: 'Nintendo', value: 'NES' },
-            { id: 'platform4', label: 'Mega Drive', value: 'MEGA' },
+            { id: 'platform4', label: 'Genesis', value: 'GENESIS' },
             { id: 'platform5', label: 'Master System', value: 'MASTER' },
             { id: 'platform6', label: 'Playstation One', value: 'PSX' },
             { id: 'platform7', label: 'Nintendo 64', value: 'N64' },

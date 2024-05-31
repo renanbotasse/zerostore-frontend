@@ -7,9 +7,7 @@ export const displayDetails = [
         backgroundColor: 'bg-[#aba798]',
         reverse: false,
         filterRedux: {
-            product_sale: true,
-            product_new: false,
-            product_type: 'game',
+            product_type: 'GAME',
         },
     },
     {
@@ -20,9 +18,7 @@ export const displayDetails = [
         backgroundColor: 'bg-[#dee8f3]',
         reverse: true,
         filterRedux: {
-            product_sale: true,
-            product_new: false,
-            product_type: 'console',
+            product_type: 'CONSOLE',
         },
     },
     {
@@ -33,9 +29,7 @@ export const displayDetails = [
         backgroundColor: 'bg-[#8c000f]',
         reverse: true,
         filterRedux: {
-            product_sale: false,
-            product_new: true,
-            product_type: null,
+            product_status: "NEW"
         },
     },
     {
@@ -46,9 +40,7 @@ export const displayDetails = [
         backgroundColor: 'bg-[#bca38b]',
         reverse: false,
         filterRedux: {
-            product_sale: true,
-            product_new: false,
-            product_type: null,
+            product_status: "SALES"
         },
     }
 ];

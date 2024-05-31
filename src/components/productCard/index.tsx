@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
     };
 
     return (
-        <div className="flex flex-col min-w-[400px] max-w-[375px] lg:w-[496px] relative border border-neutral-200 rounded-md hover:shadow-xl">
+        <div className="flex flex-col min-w-[250px] max-w-[250px] lg:w-[496px] relative border border-neutral-200 rounded-md hover:shadow-xl">
             <a
                 className="absolute inset-0 z-1 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-md"
                 href="#"
