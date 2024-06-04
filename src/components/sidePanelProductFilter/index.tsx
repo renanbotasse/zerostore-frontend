@@ -1,5 +1,6 @@
 import ProductCard from '../productCard/index.js';
 import { SfScrollable } from '@storefront-ui/react';
+import { allProductsRequest } from '../../api/products/allProducts.js';
 
 import { Fragment, useState, useEffect } from 'react';
 import {
@@ -35,8 +36,7 @@ export default function SidePanelProductFilter() {
     const filterInitialState: FilterPageInitialState = {
         product_platform: filterState.product_platform || null,
         product_type: filterState.product_type || null,
-        product_new: filterState.product_new || null,
-        product_sales: filterState.product_sales || null,
+        product_status: filterState.product_status || null,
     };
 
     // DISPLAY PRODUTOS
@@ -46,16 +46,11 @@ export default function SidePanelProductFilter() {
 
     // LOGICA - REQUEST
     const fetchFilteredProducts = async () => {
-        const baseUrl = 'http://localhost:3000/products';
-        try {
-            const response = await fetch(baseUrl);
-            const data = await response.json();
-            setAllProducts(data);
-            applyFilters(data);
-        } catch (error) {
-            console.error('Error fetching products:', error);
-        }
+        const data = await allProductsRequest();
+        setAllProducts(data);
+        applyFilters(data);
     };
+    
 
     // SELEÇÃO DE CATEGORIAS, FILTROS E STATUS
     const [selectedCategory, setSelectedCategory] = useState<string | null>(filterInitialState.product_type);
@@ -126,8 +121,8 @@ export default function SidePanelProductFilter() {
     return (
         <>
             <div className="flex">
-                <aside className="min-w-[350px] max-w-[350px] md:max-w-[350px]">
-                    <div className="flex items-center justify-between mb-4">
+                <aside className="w-[175px]">
+                    <div className="items-center justify-between mb-4">
                         <h4 className="px-2 font-bold typography-headline-4">List settings</h4>
                         <button type="button" className="sm:hidden text-gray-100" aria-label="Close filters panel">
                             <SfIconClose />
@@ -223,13 +218,13 @@ export default function SidePanelProductFilter() {
                     {products.map((product, i) => (
                         <div
                             key={i}
-                            className=" mt-40 ml-4 flex items-center justify-center text-gray-500 border border-dashed w-[250px] h-[250px] shrink-0 bg-neutral-100 border-negative-300"
+                            className="ml-10 mt-40 text-gray-500 border border-dashed w-[250px] h-[250px] shrink-0 bg-neutral-100 border-negative-300"
                         >
-                            <ProductCard product={product} /> {/* Passa um único produto */}
+                            <ProductCard product={product} />
                         </div>
                     ))}
                 </div>
             </div>
-     </>
+        </>
     );
 }

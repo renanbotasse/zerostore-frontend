@@ -14,31 +14,31 @@ export default function ProductCard({ product }) {
     };
 
     return (
-        <div className="flex flex-col min-w-[250px] max-w-[250px] lg:w-[496px] relative border border-neutral-200 rounded-md hover:shadow-xl">
-            <a
-                className="absolute inset-0 z-1 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-md"
-                href="#"
-                aria-label={product.product_name}
-            />
-            <img
-                src={product.product_img[0]}
-                alt={product.product_name}
-                className="object-fit h-auto rounded-t-md aspect-square"
-            />
-            <div className="flex flex-col items-start p-4 grow">
-                <p className="font-medium typography-text-base">{product.product_name}</p>
-                <p className="mt-1 mb-4 font-normal typography-text-sm text-neutral-700">
-                    R${product.product_price.toFixed(2)}
-                </p>
-                <div className="relative">
-                    <SfButton className="mr-2 bg-red-950 hover:bg-red-950 hover:font-bold active:bg-red-900" onClick={handleClick}>
-                        Comprar
-                    </SfButton>
-                    <SfButton variant="tertiary" className="text-red-950 hover:bg-red-950 hover:text-white active:bg-red-900 active:text-white" onClick={handleClick}>
-                        Adicionar ao Carrinho
+
+            <div className="flex flex-col max-h-[600px] min-[600px] min-w-[250px] max-w-[250px] lg:w-[496px] relative border border-neutral-200 rounded-md hover:shadow-xl bg-gray-200">
+                <a
+                    className="inset-0 z-1 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-md"
+                    href="#"
+                    aria-label={product.product_name}
+                />
+                <img
+                    src={product.product_img[0]}
+                    alt={product.product_name}
+                    className="object-fit h-auto rounded-t-md aspect-square"
+                />
+                <div className="flex flex-col items-center justify-center text-center grow">
+                    <p className="pt-3 min-h-[60px] font-medium typography-text-base">{product.product_name}</p>
+                    <p className="mb-4 font-bold text-neutral-700">
+                        ${product.product_price.toFixed(2)}
+                    </p>
+
+                </div>
+                <div className="flex flex-col p-1 grow">
+                    <SfButton className="bg-red-950 hover:bg-red-950 hover:font-bold active:bg-red-900" onClick={handleClick}>
+                        Add to Cart
                     </SfButton>
                 </div>
             </div>
-        </div>
+
     );
 }

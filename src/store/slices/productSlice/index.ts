@@ -2,16 +2,21 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ProductState } from './model';
 
 const initialState: ProductState = {
-    product_reference: 0,
-    product_name: '',
-    product_description: '',
-    product_price: 0,
-    product_quantity: 0,
-    product_platform: '',
-    product_type: '',
-    product_img: [],
-    product_video: '',
-    product_status: ''
+    product_reference: 1000,
+    product_name: "Metal Gear Solid",
+    product_description: "Step into the shoes of Solid Snake in this stealth-action masterpiece. Unravel the secrets of a nuclear weapons facility and confront the deadly FOXHOUND unit. Utilize tactical espionage to infiltrate enemy bases, avoid detection, and engage in thrilling boss battles. The story is a gripping tale of loyalty, betrayal, and the harsh realities of war. With its innovative gameplay, cinematic presentation, and memorable characters, Metal Gear Solid set a new standard for the action genre and remains a must-play classic.",
+    product_price: 50.00,
+    product_quantity: 100,
+    product_platform: "PSX",
+    product_type: "GAME",
+    product_img: [
+        "https://zerostore.s3.eu-north-1.amazonaws.com/products/psx/Metal+Gear+Solid+boxart.png",
+        "https://zerostore.s3.eu-north-1.amazonaws.com/products/psx/Metal+Gear+Solid+s1.png",
+        "https://zerostore.s3.eu-north-1.amazonaws.com/products/psx/Metal+Gear+Solid+s2.png",
+        "https://zerostore.s3.eu-north-1.amazonaws.com/products/psx/Metal+Gear+Solid+s3.png"
+    ],
+    product_video: "https://youtu.be/vj6plOoDl_s",
+    product_status: "NORMAL"
 };
 
 const setProductSlice = createSlice({

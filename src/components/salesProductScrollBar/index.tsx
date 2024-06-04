@@ -1,22 +1,16 @@
 import { SfScrollable } from '@storefront-ui/react';
-import ProductCard from '../productCard';
+import StatusProductCard from '../productStatus';
 import { useState, useEffect } from 'react';
 import { SfThumbnail, SfIconFavorite } from '@storefront-ui/react';
+import { salesProductsRequest } from '../../api/products/salesProducts';
 
 export default function ProductScrollBar() {
     const [products, setProducts] = useState<any[]>([]);
-
     useEffect(() => {
         const fetchFilteredProducts = async () => {
-            try {
-                const response = await fetch('http://localhost:3000/products/sales');
-                const data = await response.json();
-                setProducts(data);
-            } catch (error) {
-                console.error('Error fetching products:', error);
-            }
+            const data = await salesProductsRequest();
+            setProducts(data);
         };
-
         fetchFilteredProducts();
     }, []);
 
@@ -25,9 +19,9 @@ export default function ProductScrollBar() {
             {products.map((product, i) => (
                 <div
                     key={i}
-                    className="ml-4 flex items-center justify-center text-gray-500 border border-dashed w-[400px] h-[550px] shrink-0 bg-neutral-100 border-negative-300"
+                    className="flex items-center justify-center text-gray-500 border shrink-0 bg-neutral-100"
                 >
-                    <ProductCard product={product}/>
+                    <StatusProductCard product={product}/>
                 </div>
             ))}
         </SfScrollable>
