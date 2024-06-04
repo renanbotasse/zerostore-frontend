@@ -23,11 +23,11 @@ export default function ProductDetail() {
     };
 
     return (
-        <div className="flex flex-col md:flex-row pt-24">
-            <div className="flex flex-col md:flex-row items-center md:w-1/2 justify-center pt-10 px-5 md:pl-36 md:pr-10">
+        <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col items-center w-full justify-center px-5 md:pl-36 md:pr-10 mt-28">
                 <ProductDescription />
             </div>
-            <div className="flex flex-col md:flex-row items-center md:w-1/2">
+            <div className="flex flex-col items-center w-full justify-center px-5 md:pl-36 md:pr-10">
                 <GalleryProduct />
             </div>
         </div>

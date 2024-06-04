@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                             square
                             as="a"
                             variant="tertiary"
-                            className="text-white hover:text-[#8c000f] hover:!bg-white "
+                            className=" text-slate-800 hover:text-red-900 hover:bg-white hover:border border-black"
                             href={link}
                             aria-label={`Go to ${label} page`}
                         >

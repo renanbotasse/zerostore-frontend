@@ -9,9 +9,10 @@ import {
 import classNames from 'classnames';
 import { useSelector } from 'react-redux';
 import { rootState } from '../../store/reducers';
+import { FaPlayCircle } from 'react-icons/fa'; // Import a play icon from react-icons
+
 
 export default function GalleryProduct() {
-
     const product = useSelector((state: rootState) => state.productRedux);
 
     const images = [
@@ -20,9 +21,16 @@ export default function GalleryProduct() {
         { imageSrc: product.product_img[0], alt: product.product_name },
     ];
 
+    // Function to construct YouTube embed URL
+    const getEmbedUrl = (product_video) => {
+        const videoIdMatch = product_video.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|.+\?v=))((\w|-){11})/);
+        return videoIdMatch ? `https://www.youtube.com/embed/${videoIdMatch[1]}` : '';
+    };
+
     const video = {
-        videoSrc: product.product_video, alt: product.product_name
-    }
+        video: getEmbedUrl(product.product_video),
+        alt: product.product_name,
+    };
 
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -35,9 +43,9 @@ export default function GalleryProduct() {
     };
 
     return (
-        <div className="relative pr-10 flex flex-col w-full max-h-[800px]  aspect-[2/1] pt-10 pb-10">
+        <div className="relative flex flex-col w-full max-h-[800px] aspect-[2/1]">
             <SfScrollable
-                className="w-full h-full snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                className="w-full h-full pt-40 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
                 activeIndex={activeIndex}
                 wrapperClassName="h-full min-h-0"
                 buttonsPlacement="none"
@@ -49,7 +57,7 @@ export default function GalleryProduct() {
                     <iframe
                         width="100%"
                         height="100%"
-                        src={`${video.videoSrc}/0.jpg`}
+                        src={video.video}
                         title={video.alt}
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -59,7 +67,7 @@ export default function GalleryProduct() {
                 {images.map(({ imageSrc, alt }, index) => (
                     <div
                         key={`${alt}-${index}`}
-                        className="flex justify-center h-full basis-full shrink-0 grow snap-center snap-always"
+                        className="flex  h-full basis-full shrink-0 grow snap-center snap-always"
                     >
                         <img
                             aria-label={alt}
@@ -77,7 +85,7 @@ export default function GalleryProduct() {
                 buttonsPlacement="floating"
                 slotPreviousButton={
                     <SfButton
-                        className="absolute disabled:hidden !rounded-full z-10 left-4 bg-white"
+                        className="disabled:hidden !rounded-full z-10 left-4 bg-white"
                         variant="secondary"
                         size="sm"
                         square
@@ -104,19 +112,24 @@ export default function GalleryProduct() {
                     )}
                     onClick={() => setActiveIndex(0)}
                 >
-                    <img
-                        alt={product.product_name}
-                        className="object-contain border border-neutral-200"
-                        width="w-100"
-                        height="h-100"
-                        src={images[2].imageSrc} // Thumbnail for the video
-                    />
+                    <div className="relative">
+                        <img
+                            alt={product.product_name}
+                            className="object-contain border border-neutral-200"
+                            width="200"
+                            height="200"
+                            src={images[2].imageSrc} // Thumbnail for the video
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <FaPlayCircle className="text-black text-6xl" />
+                        </div>
+                    </div>
                 </button>
                 {images.map(({ imageSrc, alt }, index) => (
                     <button
                         type="button"
                         aria-label={product.product_name}
-                        aria-current={activeIndex === index + 1}
+                        aria-current={activeIndex === index + 0}
                         key={`${alt}-${index}-thumbnail`}
                         className={classNames(
                             'md:w-32 md:h-32 relative shrink-0 pb-1 my-2 -mr-2 border-b-4 snap-start cursor-pointer focus-visible:outline focus-visible:outline-offset transition-colors flex-grow md:flex-grow-0',
