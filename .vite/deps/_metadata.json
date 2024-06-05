@@ -1,0 +1,130 @@
+{
+  "hash": "6f2bee83",
+  "configHash": "ca4b0419",
+  "lockfileHash": "ba05f890",
+  "browserHash": "21a7df66",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "878e4177",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "f7f0f918",
+      "needsInterop": true
+    },
+    "react-redux": {
+      "src": "../../node_modules/react-redux/dist/react-redux.mjs",
+      "file": "react-redux.js",
+      "fileHash": "fd503351",
+      "needsInterop": false
+    },
+    "@chakra-ui/react": {
+      "src": "../../node_modules/@chakra-ui/react/dist/index.mjs",
+      "file": "@chakra-ui_react.js",
+      "fileHash": "38fbca69",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "e516046a",
+      "needsInterop": false
+    },
+    "@reduxjs/toolkit": {
+      "src": "../../node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs",
+      "file": "@reduxjs_toolkit.js",
+      "fileHash": "5b4f2507",
+      "needsInterop": false
+    },
+    "@storefront-ui/react": {
+      "src": "../../node_modules/@storefront-ui/react/dist/index.mjs",
+      "file": "@storefront-ui_react.js",
+      "fileHash": "174a5dca",
+      "needsInterop": false
+    },
+    "classnames": {
+      "src": "../../node_modules/classnames/index.js",
+      "file": "classnames.js",
+      "fileHash": "d388a1cf",
+      "needsInterop": true
+    },
+    "react-use": {
+      "src": "../../node_modules/react-use/esm/index.js",
+      "file": "react-use.js",
+      "fileHash": "c207f472",
+      "needsInterop": false
+    },
+    "react-transition-group": {
+      "src": "../../node_modules/react-transition-group/esm/index.js",
+      "file": "react-transition-group.js",
+      "fileHash": "bc67de43",
+      "needsInterop": false
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "ff2e8d44",
+      "needsInterop": true
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "15227e38",
+      "needsInterop": false
+    },
+    "@floating-ui/react-dom": {
+      "src": "../../node_modules/@floating-ui/react-dom/dist/floating-ui.react-dom.mjs",
+      "file": "@floating-ui_react-dom.js",
+      "fileHash": "71f3999f",
+      "needsInterop": false
+    },
+    "@storefront-ui/shared": {
+      "src": "../../node_modules/@storefront-ui/shared/dist/index.mjs",
+      "file": "@storefront-ui_shared.js",
+      "fileHash": "7d584801",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "5e6d1afd",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-ACAWK2AY": {
+      "file": "chunk-ACAWK2AY.js"
+    },
+    "chunk-DOKO2SRA": {
+      "file": "chunk-DOKO2SRA.js"
+    },
+    "chunk-HQEHGVNZ": {
+      "file": "chunk-HQEHGVNZ.js"
+    },
+    "chunk-GTONXFU6": {
+      "file": "chunk-GTONXFU6.js"
+    },
+    "chunk-CZCRWWAH": {
+      "file": "chunk-CZCRWWAH.js"
+    },
+    "chunk-KRAWGZ3J": {
+      "file": "chunk-KRAWGZ3J.js"
+    },
+    "chunk-OOCFQ3FX": {
+      "file": "chunk-OOCFQ3FX.js"
+    },
+    "chunk-6P5PNMGD": {
+      "file": "chunk-6P5PNMGD.js"
+    },
+    "chunk-5QIHIX6U": {
+      "file": "chunk-5QIHIX6U.js"
+    },
+    "chunk-WXXH56N5": {
+      "file": "chunk-WXXH56N5.js"
+    }
+  }
+}

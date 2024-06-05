@@ -20,7 +20,7 @@ import { useNavigate } from 'react-router-dom';
 import { actionItems, bannerDetails, categoriesContent } from './navBarTopData'
 import { productRedux } from '../../store/slices/productSlice/index'; 
 
-export default function NavBarTop() {
+export default function SearchNavBarTop() {
     const { close, toggle, isOpen } = useDisclosure();
     const drawerRef = useRef(null);
     const menuRef = useRef(null);
@@ -40,7 +40,7 @@ export default function NavBarTop() {
         dispatch(productRedux({
             product_name: inputValue
         }));
-        navigateTo('/search');
+        console.log(inputValue)
     };
 
     const dispatch = useDispatch();
@@ -176,8 +176,8 @@ export default function NavBarTop() {
                                         ))}
 
                                         <div className="flex flex-col items-center overflow-hidden">
-                                            <img src={bannerDetails.image} alt={bannerDetails.title} className="relative z-[1] h-[250px] object-cover" />
-                                            <p className="font-medium text-center z-[2]">
+                                            <img src={bannerDetails.image} alt={bannerDetails.title} className="absolute h-[250px] z-[1] object-cover" />
+                                            <p className="px-4 mt-4 mb-4 font-medium text-center typography-text-base z-[2]">
                                                 {bannerDetails.title}
                                             </p>
                                         </div>

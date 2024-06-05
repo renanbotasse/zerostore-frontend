@@ -28,14 +28,14 @@ const BannerLanding = () => {
     };
 
     return (
-        <div className="flex flex-col gap-6 md:flex-row bg-neutral-100">
-            <div className="flex flex-col gap-6 md:flex-row">
+        <div className="flex flex-col md:flex-row bg-neutral-100">
+            <div className="flex flex-col md:flex-row">
                 {displayDetails.map(
                     ({ title, subtitle, description, callToAction, image, backgroundColor, reverse, filterRedux }, index) => (
                         <div
                             key={`${title}-${index}`}
                             className={classNames(
-                                `relative flex flex-col justify-between rounded-md md:items-center md:basis-1/2 ${backgroundColor}`,
+                                `relative p-3 flex flex-col md:items-center md:basis-1/2 ${backgroundColor}`,
                                 { 'flex-col-reverse': reverse },
                             )}
                         >
@@ -47,8 +47,8 @@ const BannerLanding = () => {
                                     {callToAction}
                                 </SfButton>
                             </div>
-                            <div className="flex items-center w-full">
-                                <img src={image} alt={title} className="w-full" />
+                            <div className="flex items-center w-cover">
+                                <img src={image} alt={title} className="w-cover h-cover" />
                             </div>
                         </div>
                     ),
