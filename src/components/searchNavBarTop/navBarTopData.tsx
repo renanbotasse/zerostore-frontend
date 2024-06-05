@@ -18,7 +18,6 @@ import newgameIcon from '../../assets/newgameIcon.png';
 import homebrewIcon from '../../assets/homebrewIcon.png';
 import accessoriesIcon from '../../assets/accessoriesIcon.png';
 import ayaneoIcon from '../../assets/ayneoIcon.png';
-import ayaneoPocketFocus from '../../assets/ayaneopocket2.png'
 
 
 export const actionItems = [
@@ -43,7 +42,7 @@ export const actionItems = [
 ];
 
 export const bannerDetails = {
-    image: ayaneoPocketFocus,
+    image: 'https://www.sealzinc.com/cdn/shop/products/B22.png?v=1686134178',
     title: 'AYNEO - One Console to rule them all',
 };
 

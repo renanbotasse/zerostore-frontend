@@ -1,3 +1,5 @@
+import sales from '/Users/renanb/Desktop/zerostore-frontend/src/assets/salesbaga.png';
+
 export const displayDetails = [
     {
         title: 'Discover Your Next Adventure',
@@ -36,7 +38,7 @@ export const displayDetails = [
         title: 'Score Big with Monthly Deals',
         subtitle: 'SALES',
         callToAction: 'SALES',
-        image: 'https://art.pixilart.com/2d29fbba12830ae.png',
+        image: sales,
         backgroundColor: 'bg-[#bca38b]',
         reverse: false,
         filterRedux: {

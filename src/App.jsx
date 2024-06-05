@@ -7,6 +7,7 @@ import LegalMentions from './pages/legalMentions'
 import Sales from './pages/sales'
 import ProductNew from './pages/productNew'
 import ProductDetails from './pages/productDetail'
+import Search from './pages/search'
 
 import { ChakraProvider } from '@chakra-ui/react'
 import {
@@ -52,6 +53,10 @@ function App() {
     {
       path: "/product-detail",
       element: <ProductDetails/>,
+    },
+    {
+      path: "/search",
+      element: <Search/>,
     },
   ]);
   return (

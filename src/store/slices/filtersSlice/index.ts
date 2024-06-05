@@ -16,7 +16,8 @@ const setFilterSlice = createSlice({
             state.product_platform = product_platform ?? state.product_platform;
             state.product_type = product_type ?? state.product_type;
             state.product_status = product_status ?? state.product_status;
-            console.log(`Filter Redux: TYPE ${state.product_type} | 
+            console.log(`Filter Redux:
+                                    TYPE ${state.product_type} | 
                                     PLATFORM ${state.product_platform} |
                                     STATUS ${state.product_status}`)
         }
