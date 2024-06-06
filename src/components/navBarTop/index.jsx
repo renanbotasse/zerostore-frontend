@@ -46,6 +46,11 @@ export default function NavBarTop() {
     const dispatch = useDispatch();
     const navigateTo = useNavigate(); // 
 
+
+    const handleBannerClick = () => {
+        navigateTo('/ayaneo');
+    }
+
     const handleFilterClick = (filterData) => {
         // Verifica se filterRedux está presente em filterData
         if (filterData.filterRedux) {
@@ -176,7 +181,7 @@ export default function NavBarTop() {
                                         ))}
 
                                         <div className="flex flex-col items-center overflow-hidden">
-                                            <img src={bannerDetails.image} alt={bannerDetails.title} className="relative z-[1] h-[250px] object-cover" />
+                                            <img src={bannerDetails.image} alt={bannerDetails.title} className="relative z-[1] h-[250px] object-cover" onClick={() => handleBannerClick()}/>
                                             <p className="font-medium text-center z-[2]">
                                                 {bannerDetails.title}
                                             </p>

@@ -44,7 +44,8 @@ export const actionItems = [
 
 export const bannerDetails = {
     image: ayaneoPocketFocus,
-    title: 'AYNEO - One Console to rule them all',
+    title: 'AYANEO - One Console to rule them all',
+    link: '/ayaneo'
 };
 
 export const categoriesContent = [
@@ -196,10 +197,10 @@ export const categoriesContent = [
                 link: '/filter',
             },
             {
-                title: 'AYNEO',
+                title: 'AYANEO',
                 icon: ayaneoIcon,
                 filterRedux: {
-                    product_platform: "AYNEO",
+                    product_platform: "AYANEO",
                     product_type: 'CONSOLE',
                 },
                 link: '/filter',

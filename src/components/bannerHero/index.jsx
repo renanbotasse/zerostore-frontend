@@ -1,14 +1,20 @@
 import { SfButton } from '@storefront-ui/react';
 import ayaneoPocket from '../../assets/ayaneopocket.png'
 import ayaneoPocketFocus from '../../assets/ayaneopocket2.png'
+import { useNavigate } from 'react-router-dom';
 
 export default function BannerHero() {
+    const navigateTo = useNavigate();
+    const handleFilterClick = () => {
+        navigateTo('/ayaneo');
+    }
+
     return (
-        <div className="relative pb-4 pt-20 min-h-[576px] bg-neutral-100 z-[-2]">
+        <div className="relative pb-4 pt-20 min-h-[576px] bg-neutral-100">
             <picture>
                 <img
                     src={ayaneoPocket}
-                    className="absolute w-full h-full z-[-1] object-cover"
+                    className="absolute w-full h-full object-cover"
                 />
             </picture>
             <div className="md:flex md:flex-row-reverse md:justify-center min-h-[576px] max-w-[1536px] mx-auto">
@@ -19,10 +25,10 @@ export default function BannerHero() {
                         className="z-[1] object-left"
                     />
                 </div>
-                <div className=" md:p-10 md:flex md:flex-col md:justify-center md:items-start md:basis-2/4">
+                <div className="z-[2] md:p-10 md:flex md:flex-col md:justify-center md:items-start md:basis-2/4">
                     <div className="flex flex-col md:flex-row gap-4 mt-6">
-                        <SfButton size="lg" className="bg-[#ffcd16] rounded-xl text-3xl" variant="bg-[#8c000f]">
-                            Click to learn more
+                        <SfButton className="bg-[#f6ba25]" variant="bg-[#]" onClick={() => handleFilterClick()}>
+                            Click to Learn More
                         </SfButton>
                     </div>
                 </div>

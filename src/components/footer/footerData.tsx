@@ -10,15 +10,15 @@ export const categories = [
         subcategories: [
             {
                 subcategoryLabel: 'Retro Bot',
-                link: '#',
+                link: 'https://github.com/renanbotasse/sageBot',
             },
             {
                 subcategoryLabel: 'Software Download',
-                link: '#',
+                link: 'https://github.com/renanbotasse/zerostore-frontend',
             },
             {
                 subcategoryLabel: 'Work with Us',
-                link: '#',
+                link: 'https://www.linkedin.com/in/renanbotasse/',
             },
         ],
     },
