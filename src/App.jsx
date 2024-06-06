@@ -8,6 +8,7 @@ import Sales from './pages/sales'
 import ProductNew from './pages/productNew'
 import ProductDetails from './pages/productDetail'
 import Search from './pages/search'
+import AyaneoDetails from './pages/ayaneo'
 
 import { ChakraProvider } from '@chakra-ui/react'
 import {
@@ -57,6 +58,10 @@ function App() {
     {
       path: "/search",
       element: <Search/>,
+    },
+    {
+      path: "/ayaneo",
+      element: <AyaneoDetails/>,
     },
   ]);
   return (
