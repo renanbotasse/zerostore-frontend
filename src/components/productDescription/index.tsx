@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     SfRating,
     SfButton,
@@ -20,19 +21,29 @@ import { clamp } from '@storefront-ui/shared';
 import { Highlight } from '@chakra-ui/react';
 import { rootState } from '../../store/reducers';
 import { useSelector } from 'react-redux';
+import { addToCart } from '../../utils/cartAdd';
+import { ProductState } from '../../utils/types'; // Adjust the import path as necessary
+import { useNavigate } from 'react-router-dom';
 
 export default function ProductDescription() {
-    const product = useSelector((state: rootState) => state.productRedux);
+    const product: ProductState = useSelector((state: rootState) => state.productRedux);
 
     const inputId = useId();
     const min = 1;
     const max = 999;
     const [value, { inc, dec, set }] = useCounter(min);
+    const navigate = useNavigate();
 
     function handleOnChange(event: ChangeEvent<HTMLInputElement>) {
         const { value: currentValue } = event.target;
         const nextValue = parseFloat(currentValue);
         set(Number(clamp(nextValue, min, max)));
+    }
+
+    function handleAddToCart() {
+        addToCart(product, value);
+        alert(`${product.product_name} has been added to your cart`);
+        navigate('/');
     }
 
     return (
@@ -90,7 +101,12 @@ export default function ProductDescription() {
                             <strong className="text-neutral-900">{product.product_quantity}</strong> in stock
                         </p>
                     </div>
-                    <SfButton size="lg" className="w-full xs:w-auto xs:ml-4 mt-2 xs:mt-0" slotPrefix={<SfIconShoppingCart size="sm" />}>
+                    <SfButton
+                        size="lg"
+                        className="w-full xs:w-auto xs:ml-4 mt-2 xs:mt-0"
+                        slotPrefix={<SfIconShoppingCart size="sm" />}
+                        onClick={handleAddToCart}
+                    >
                         Add to cart
                     </SfButton>
                 </div>
