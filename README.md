@@ -4,7 +4,7 @@ Zero Store
 </h1>
 
 <h3 style="text-align: center;">
-E-Commerce website created with React
+E-commerce website created with React
 </h3>
 
 
@@ -32,8 +32,8 @@ Open your browser and navigate to LocalHost: `http://localhost:5173/`
 
 ## ScreenShots
 - Landing
-
-![alt text](https://zerostore.s3.eu-north-1.amazonaws.com/readme/landing.png)
+  
+![Landing](https://github.com/renanbotasse/zerostore-frontend/assets/101360239/9766b89e-a014-4234-913b-c43311494851)
 
 - Ayaneo (Video)
 
