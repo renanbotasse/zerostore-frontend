@@ -19,6 +19,8 @@ import { filterRedux } from '../../store/slices/filtersSlice/index'; // Importe 
 import { useNavigate } from 'react-router-dom';
 import { actionItems, bannerDetails, categoriesContent } from './navBarTopData'
 import { productRedux } from '../../store/slices/productSlice/index'; 
+import CartIcon from '../cartIcon/index'
+
 
 export default function NavBarTop() {
     const { close, toggle, isOpen } = useDisclosure();
@@ -226,6 +228,7 @@ export default function NavBarTop() {
                         />
                     </form>
                     <nav className="flex-1 flex flex-nowrap justify-end items-center md:ml-10 gap-x-1" aria-label="SF Navigation">
+                    <CartIcon/>
                         {actionItems.map((actionItem) => (
                             <SfButton
                                 className="text-white bg-transparent hover:bg-white hover:text-black active:bg-white active:text-black"

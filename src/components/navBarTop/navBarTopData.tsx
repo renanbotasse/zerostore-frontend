@@ -22,12 +22,7 @@ import ayaneoPocketFocus from '../../assets/ayaneopocket2.png'
 
 
 export const actionItems = [
-    {
-        icon: <SfIconShoppingCart />,
-        label: '',
-        ariaLabel: 'Cart',
-        role: 'button',
-    },
+
     {
         icon: <SfIconFavorite />,
         label: '',

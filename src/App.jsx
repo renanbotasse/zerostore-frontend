@@ -9,6 +9,7 @@ import ProductNew from './pages/productNew'
 import ProductDetails from './pages/productDetail'
 import Search from './pages/search'
 import AyaneoDetails from './pages/ayaneo'
+import Checkout from './pages/checkout'
 
 import { ChakraProvider } from '@chakra-ui/react'
 import {
@@ -62,6 +63,10 @@ function App() {
     {
       path: "/ayaneo",
       element: <AyaneoDetails/>,
+    },
+    {
+      path: "/checkout",
+      element: <Checkout/>,
     },
   ]);
   return (
