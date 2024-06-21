@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function CheckoutPage() {
+export default function CartPage() {
     const [cartItems, setCartItems] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
 
@@ -32,14 +32,23 @@ export default function CheckoutPage() {
         localStorage.setItem('cart', JSON.stringify(newCartItems));
     };
 
-    const handleContinueBuying = () => {
+    const handleShopMore = () => {
         navigateTo('/');
     }
 
+    const handleCheckout = () => {
+        const cartData = cartItems.map(item => ({
+            product_reference: item.product_reference,
+            quantity: item.quantity
+        }));
+        localStorage.setItem('checkout', JSON.stringify(cartData));
+        localStorage.removeItem('cart');
+        navigateTo('/checkout');
+    }
     return (
         <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2 pt-28 m-10">
-                <h2 className="text-2xl font-bold mb-4">Checkout</h2>
+                <h2 className="text-2xl font-bold mb-4">CART</h2>
                 {cartItems.map((item, index) => (
                     <div key={index} className="flex items-center space-x-4 border-b py-4">
                         <img src={item.product_img[0]} alt={item.product_name} className="w-20 h-20 object-contain" />
@@ -86,8 +95,8 @@ export default function CheckoutPage() {
                     </div>
                 </div>
                 <div className="mt-8">
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded-md" onClick={handleContinueBuying}>Continue Buying</button>
-                    <button className="ml-4 bg-green-500 text-white px-4 py-2 rounded-md">Checkout</button>
+                    <button className="bg-blue-500 text-white px-4 py-2 rounded-md" onClick={handleShopMore}>Shop More</button>
+                    <button className="ml-4 bg-green-500 text-white px-4 py-2 rounded-md" onClick={handleCheckout}>Checkout</button>
                 </div>
             </div>
         </div>
