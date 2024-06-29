@@ -1,19 +1,37 @@
 import { SfButton } from '@storefront-ui/react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import SignCheckoutRobot from '../../../assets/signcheckout.png'
+import {serverToken, userCart, userAddress, userInfo, userCheckout } from './reviewCheckoutData';
 
-const cardDetails = [
-    {
-        image: SignCheckoutRobot,
-        title: 'Hello! To checkout, sign in or register!',
-        description:
-            '',
-        button1: 'Register',
-        button2: 'Sign In',
+
+export default function ReviewCheckout() {
+
+    const [token, setToken] = useState();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const tokenCheck = JSON.parse(localStorage.getItem('cart') || '[]');
+        setToken(tokenCheck);
+    }, []);
+
+    if (token !== '') {
+//1 - VERIFICA SE O JWT É VALIDO
+        const userToken = serverToken;
+//2 - SALVA NO BACK O CART
+        const userCartFront = userCart;
+//3 - PEDE DO BACK O CART, ENDEREÇO e INFO
+        const userCheckoutCartFront = userCheckout;
+        const userCheckoutAddress = userAddress;
+        const userCheckoutInfo = userInfo;        
+    } else {
+        navigate('/checkout/sing');
     }
-];
 
-export default function SignCheckout() {
+//5 Alterar a quantidade e atualizar no back (igual cart)
+//6 Alterar endereço para entrega (igual cart)
+
+
+
     const navigateTo = useNavigate(); // 
 
     const handleRegister = () => {
@@ -23,7 +41,7 @@ export default function SignCheckout() {
     const handleSignIn = () => {
         const token = 'JWT'
         localStorage.setItem('token', JSON.stringify(token));
-        navigateTo('/checkout');
+        navigateTo('/signin');
     }
 
     return (
@@ -51,3 +69,20 @@ export default function SignCheckout() {
         </div>
     );
 }
+
+//1 Verificar JWT
+
+//2 Request - Salvar Cart do usuário
+
+//3 Request - Pedir cart do usuário salvo para montar a página
+
+//4 Request - Pedir endereço do Usuario
+
+//8 Payment - Confirma valor da página com valor do back, sendo OK, manda para usário par ao serviço de pagamento
+
+//9 Pagamento gerando Invoice, encaminha para profile/orders/ID
+
+
+//5 Request - Permitir usuário alterar a quantidade e atualizar no back
+//6  Permitir usuário alterar endereço para entrega específica
+//7 Alterar informação pessoal só na página profile/info

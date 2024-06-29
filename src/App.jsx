@@ -10,7 +10,10 @@ import ProductDetails from './pages/productDetail'
 import Search from './pages/search'
 import AyaneoDetails from './pages/ayaneo'
 import CartPage from './pages/cart'
-import CheckoutSignPage from './pages/checkout/sign'
+import CheckoutSignPage from './pages/sign'
+import RegisterPage from './pages/register'
+import SignInPage from './pages/signin'
+import CheckoutPage from './pages/checkout' 
 
 import { ChakraProvider } from '@chakra-ui/react'
 import {
@@ -72,6 +75,17 @@ function App() {
     {
       path: "/checkout/sign",
       element: <CheckoutSignPage/>,
+    },
+    {
+      path: "/register",
+      element: <RegisterPage/>,
+    },
+    {
+      path: "/signin",
+      element: <SignInPage/>,
+    },    {
+      path: "/checkout",
+      element: <CheckoutPage/>,
     },
   ]);
   return (

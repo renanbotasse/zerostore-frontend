@@ -1,13 +1,13 @@
 import Footer from '../../components/footer'
 import NavBarTop from '../../components/navBarTop';
-import CheckoutFinalPage from '../../components/checkout/index';
+import SignCheckout from '../../components/cart/signCheckout';
 import '../../globals.css';
 
-export default function CheckoutPage() {
+export default function CheckoutSignPage() {
     return (
         <div>
             <NavBarTop/>
-            <CheckoutFinalPage/>
+            <SignCheckout/>
             <Footer />
         </div>
     );
