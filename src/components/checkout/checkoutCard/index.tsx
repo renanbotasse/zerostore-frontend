@@ -45,7 +45,8 @@ export default function CreditCardForm() {
 
             // Extract orderId from response and navigate to order details page
             const orderId = responseData.order.orderId;
-            navigate(`/profile/orders/${orderId}`);
+            localStorage.setItem('orderId', JSON.stringify(orderId));
+            navigate('/profile/neworder');
         } catch (error) {
             console.error('Error submitting order:', error);
         }
