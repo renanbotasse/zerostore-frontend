@@ -21,7 +21,7 @@ import { rootState } from '../../store/reducers.js';
 import { filterRedux } from '../../store/slices/filtersSlice/index.js';
 
 // FILTERS DATA
-import { sortOptions, filtersData, FilterPageInitialState } from './sidePanelProductFilter.js';
+import { filtersData, FilterPageInitialState } from './sidePanelProductFilter.js';
 
 export default function SidePanelProductFilter() {
     // LÓGICA - REDUX
@@ -128,19 +128,7 @@ export default function SidePanelProductFilter() {
                             <SfIconClose />
                         </button>
                     </div>
-                    <h5 className="py-2 px-4 mt-16 mb-6 bg-neutral-100 typography-headline-6 font-bold text-neutral-900 uppercase tracking-widest md:rounded-md">
-                        Sort by
-                    </h5>
-                    <div className="px-2">
-                        <SfSelect aria-label="Sorting">
-                            {sortOptions.map((option) => (
-                                <option value={option.value} key={option.value}>
-                                    {option.label}
-                                </option>
-                            ))}
-                        </SfSelect>
-                    </div>
-                    <h5 className="py-2 px-4 mt-6 mb-4 bg-neutral-100 typography-headline-6 font-bold text-neutral-900 uppercase tracking-widest md:rounded-md">
+                    <h5 className="py-2 px-4 mt-16 mb-4 bg-neutral-100 typography-headline-6 font-bold text-neutral-900 uppercase tracking-widest md:rounded-md">
                         Filter
                     </h5>
                     {filtersData.map((section) => (

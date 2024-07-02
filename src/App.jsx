@@ -16,6 +16,7 @@ import SignInPage from './pages/signin'
 import CheckoutPage from './pages/checkout' 
 import NewOrder from './pages/neworder'
 import ProfileOrdersPage from './pages/profileOrders'
+import ProfilePage from './pages/profile'
 
 import { ChakraProvider } from '@chakra-ui/react'
 import {
@@ -75,7 +76,7 @@ function App() {
       element: <CartPage/>,
     },
     {
-      path: "/checkout/sign",
+      path: "/sign",
       element: <CheckoutSignPage/>,
     },
     {
@@ -89,6 +90,10 @@ function App() {
     {
       path: "/checkout",
       element: <CheckoutPage/>,
+    },
+    {
+      path: "/profile",
+      element: <ProfilePage/>,
     },
     {
       path: "/profile/neworder",

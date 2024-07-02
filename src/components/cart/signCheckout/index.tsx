@@ -5,7 +5,7 @@ import SignCheckoutRobot from '../../../assets/signcheckout.png'
 const cardDetails = [
     {
         image: SignCheckoutRobot,
-        title: 'Hello! To checkout, sign in or register!',
+        title: 'Hello! Can you sign in or register?',
         description:
             '',
         button1: 'Register',

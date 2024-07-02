@@ -57,7 +57,7 @@ export default function CheckoutRegisterForm() {
     }, []);
 
     const handleEdit = () => {
-        navigate('/profile/dashboard');
+        navigate('/profile');
     };
 
     return (
