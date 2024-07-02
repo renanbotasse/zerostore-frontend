@@ -1,13 +1,13 @@
 import Footer from '../../components/footer'
 import NavBarTop from '../../components/navBarTop';
-import CheckoutFinalPage from '../../components/checkout/index';
+import RegisterForm from '../../components/registerform';
 import '../../globals.css';
 
-export default function CheckoutPage() {
+export default function RegisterPage() {
     return (
         <div>
             <NavBarTop/>
-            <CheckoutFinalPage/>
+            <RegisterForm/>
             <Footer />
         </div>
     );

@@ -5,15 +5,6 @@ export type FilterPageInitialState = {
 };
 
 
-export const sortOptions = [
-    { id: 'sort1', label: 'Relevance', value: 'relevance' },
-    { id: 'sort2', label: 'Price: Low to High', value: 'price low to high' },
-    { id: 'sort3', label: 'Price: High to Low', value: 'price high to low' },
-    { id: 'sort4', label: 'New Arrivals', value: 'new arrivals' },
-    { id: 'sort5', label: 'Customer Rating', value: 'customer rating' },
-    { id: 'sort6', label: 'Bestsellers', value: 'bestsellers' },
-];
-
 export type FilterDetail = {
     id: string;
     label: string;
@@ -61,14 +52,14 @@ export const filtersData: Node[] = [
         summary: 'Platform',
         type: 'checkbox',
         details: [
-            { id: 'platform1', label: 'HomeBrew', value: 'HOME' },
             { id: 'platform2', label: 'Super Nintendo', value: 'SNES' },
             { id: 'platform3', label: 'Nintendo', value: 'NES' },
             { id: 'platform4', label: 'Genesis', value: 'GENESIS' },
             { id: 'platform5', label: 'Master System', value: 'MASTER' },
             { id: 'platform6', label: 'Playstation One', value: 'PSX' },
             { id: 'platform7', label: 'Nintendo 64', value: 'N64' },
-            { id: 'platform8', label: 'Ayneo', value: 'AYNEO' },
+            { id: 'platform8', label: 'Ayaneo', value: 'AYANEO' },
+            { id: 'platform9', label: 'GBA', value: 'GBA' }
         ],
     }
 ];

@@ -1,13 +1,13 @@
 import Footer from '../../components/footer'
 import NavBarTop from '../../components/navBarTop';
-import CheckoutFinalPage from '../../components/checkout/index';
+import NewOrderFinalPage from '../../components/neworder/index';
 import '../../globals.css';
 
-export default function CheckoutPage() {
+export default function NewOrder() {
     return (
         <div>
             <NavBarTop/>
-            <CheckoutFinalPage/>
+            <NewOrderFinalPage/>
             <Footer />
         </div>
     );

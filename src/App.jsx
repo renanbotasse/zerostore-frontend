@@ -9,7 +9,14 @@ import ProductNew from './pages/productNew'
 import ProductDetails from './pages/productDetail'
 import Search from './pages/search'
 import AyaneoDetails from './pages/ayaneo'
-import Checkout from './pages/checkout'
+import CartPage from './pages/cart'
+import CheckoutSignPage from './pages/sign'
+import RegisterPage from './pages/register'
+import SignInPage from './pages/signin'
+import CheckoutPage from './pages/checkout' 
+import NewOrder from './pages/neworder'
+import ProfileOrdersPage from './pages/profileOrders'
+import ProfilePage from './pages/profile'
 
 import { ChakraProvider } from '@chakra-ui/react'
 import {
@@ -65,8 +72,36 @@ function App() {
       element: <AyaneoDetails/>,
     },
     {
+      path: "/cart",
+      element: <CartPage/>,
+    },
+    {
+      path: "/sign",
+      element: <CheckoutSignPage/>,
+    },
+    {
+      path: "/register",
+      element: <RegisterPage/>,
+    },
+    {
+      path: "/signin",
+      element: <SignInPage/>,
+    },
+    {
       path: "/checkout",
-      element: <Checkout/>,
+      element: <CheckoutPage/>,
+    },
+    {
+      path: "/profile",
+      element: <ProfilePage/>,
+    },
+    {
+      path: "/profile/neworder",
+      element: <NewOrder/>,
+    },
+    {
+      path: "/profile/orders",
+      element: <ProfileOrdersPage/>,
     },
   ]);
   return (

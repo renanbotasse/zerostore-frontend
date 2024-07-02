@@ -27,7 +27,7 @@ const CartIcon = () => {
     }, []);
 
     const handleCheckout = () => {
-        navigateTo('/checkout');
+        navigateTo('/cart');
     }
     console.log(cartCount)
     return (

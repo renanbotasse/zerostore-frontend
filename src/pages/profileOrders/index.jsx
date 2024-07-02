@@ -1,13 +1,13 @@
 import Footer from '../../components/footer'
 import NavBarTop from '../../components/navBarTop';
-import CheckoutFinalPage from '../../components/checkout/index';
+import ProfileOrders from '../../components/profileOrders/index';
 import '../../globals.css';
 
-export default function CheckoutPage() {
+export default function ProfileOrdersPage() {
     return (
         <div>
             <NavBarTop/>
-            <CheckoutFinalPage/>
+            <ProfileOrders/>
             <Footer />
         </div>
     );

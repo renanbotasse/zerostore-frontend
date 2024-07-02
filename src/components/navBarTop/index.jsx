@@ -20,6 +20,7 @@ import { useNavigate } from 'react-router-dom';
 import { actionItems, bannerDetails, categoriesContent } from './navBarTopData'
 import { productRedux } from '../../store/slices/productSlice/index'; 
 import CartIcon from '../cartIcon/index'
+import ProfileIcon from '../profileIcon/index'
 
 
 export default function NavBarTop() {
@@ -229,20 +230,7 @@ export default function NavBarTop() {
                     </form>
                     <nav className="flex-1 flex flex-nowrap justify-end items-center md:ml-10 gap-x-1" aria-label="SF Navigation">
                     <CartIcon/>
-                        {actionItems.map((actionItem) => (
-                            <SfButton
-                                className="text-white bg-transparent hover:bg-white hover:text-black active:bg-white active:text-black"
-                                key={actionItem.ariaLabel}
-                                aria-label={actionItem.ariaLabel}
-                                variant="tertiary"
-                                slotPrefix={actionItem.icon}
-                                square
-                            >
-                                {actionItem.role === 'login' && (
-                                    <p className="hidden lg:inline-flex whitespace-nowrap pr-2">{actionItem.label}</p>
-                                )}
-                            </SfButton>
-                        ))}
+                    <ProfileIcon/>
                     </nav>
                 </div>
                 <form role="search" className="flex md:hidden flex-[100%] my-2 mx-4" onSubmit={search}>
