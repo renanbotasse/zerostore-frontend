@@ -1,4 +1,4 @@
-import sales from '/Users/renanb/Desktop/zerostore-frontend/src/assets/salesbaga.png';
+import sales from './../../assets/salesbaga.png';
 
 export const displayDetails = [
     {
