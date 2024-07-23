@@ -53,7 +53,7 @@ export default function CartPage() {
 
             // Make POST request to create order
             try {
-                const response = await axios.patch('http://localhost:3000/cart', {
+                const response = await axios.patch('http://51.20.53.161:3000/cart', {
                     cart: cartData
                 }, {
                     headers: {

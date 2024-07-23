@@ -15,7 +15,7 @@ export default function CheckoutProducts() {
                     throw new Error('User is not authenticated');
                 }
 
-                const responseGetCart = await fetch('http://localhost:3000/cart', {
+                const responseGetCart = await fetch('http://51.20.53.161:3000/cart', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

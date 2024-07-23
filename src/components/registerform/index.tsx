@@ -40,7 +40,7 @@ export default function RegisterForm() {
 
         try {
             // Step 1: Register the user
-            const registerResponse = await fetch('http://localhost:3000/user', {
+            const registerResponse = await fetch('http://51.20.53.161:3000/user', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -60,7 +60,7 @@ export default function RegisterForm() {
             console.log(jwtToken)
 
             // Step 2: Update the user address
-            const updateAddressResponse = await fetch('http://localhost:3000/address', {
+            const updateAddressResponse = await fetch('http://51.20.53.161:3000/address', {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

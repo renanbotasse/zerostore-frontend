@@ -18,7 +18,7 @@ export default function NewOrderFinalPage() {
             }
 
             try {
-                const response = await fetch('http://localhost:3000/order/neworder', {
+                const response = await fetch('http://51.20.53.161:3000/order/neworder', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

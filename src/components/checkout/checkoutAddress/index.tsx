@@ -21,7 +21,7 @@ export default function CheckoutRegisterForm() {
             const jwtToken = localStorage.getItem('Token');
             if (jwtToken) {
                 try {
-                    const response = await fetch('http://localhost:3000/user/userId', {
+                    const response = await fetch('http://51.20.53.161:3000/user/userId', {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',

@@ -49,7 +49,7 @@ export default function Ayaneo() {
     useEffect(() => {
         const fetchProduct = async () => {
           try {
-            const response = await axios.get('http://localhost:3000/products/12001');
+            const response = await axios.get('http://51.20.53.161:3000/products/12001');
             const ayaneo = response.data; // Define o estado do produto com os dados recebidos do backend
             dispatch(productRedux(ayaneo)); // Dispara a ação Redux com os dados do produto
           } catch (error) {

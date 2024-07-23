@@ -27,7 +27,7 @@ export default function CreditCardForm() {
         const jwtToken = localStorage.getItem('Token');
 
         try {
-            const response = await fetch('http://localhost:3000/order/cart', {
+            const response = await fetch('http://51.20.53.161:3000/order/cart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

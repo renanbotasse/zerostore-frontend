@@ -29,7 +29,7 @@ export default function ProfileUserForm() {
             const jwtToken = localStorage.getItem('Token');
             if (jwtToken) {
                 try {
-                    const response = await fetch('http://localhost:3000/user/userId', {
+                    const response = await fetch('http://51.20.53.161:3000/user/userId', {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ export default function ProfileUserForm() {
         const jwtToken = localStorage.getItem('Token');
 
         try {
-            const response = await fetch('http://localhost:3000/user/update-info', {
+            const response = await fetch('http://51.20.53.161:3000/user/update-info', {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -112,7 +112,7 @@ export default function ProfileUserForm() {
         const jwtToken = localStorage.getItem('Token');
         if (jwtToken) {
             try {
-                const response = await fetch('http://localhost:3000/user', {
+                const response = await fetch('http://51.20.53.161:3000/user', {
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ export default function ProfileUserForm() {
         const jwtToken = localStorage.getItem('Token');
         if (jwtToken) {
             try {
-                const response = await fetch('http://localhost:3000/address', {
+                const response = await fetch('http://51.20.53.161:3000/address', {
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json',

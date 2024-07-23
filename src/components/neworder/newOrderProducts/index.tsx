@@ -12,7 +12,7 @@ export default function NewOrderProducts({ order }) {
 
             try {
                 const detailsPromises = order.orderProducts.map(async (product) => {
-                    const response = await axios.get(`http://localhost:3000/products/${product.product_reference}`);
+                    const response = await axios.get(`http://51.20.53.161:3000/products/${product.product_reference}`);
                     return { ...response.data, ...product };
                 });
 

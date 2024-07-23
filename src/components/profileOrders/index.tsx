@@ -18,7 +18,7 @@ export default function ProfileOrders() {
             }
 
             try {
-                const response = await axios.get('http://localhost:3000/order', {
+                const response = await axios.get('http://51.20.53.161:3000/order', {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${jwtToken}`,

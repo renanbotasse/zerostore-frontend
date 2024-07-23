@@ -19,7 +19,7 @@ export default function SignInForm() {
 
         try {
             // Step 1: Register the user
-            const registerResponse = await fetch('http://localhost:3000/auth', {
+            const registerResponse = await fetch('http://51.20.53.161:3000/auth', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ export default function SignInForm() {
             console.log(jwtToken)
 
             // Step 2: Update the user address
-            const responseGetCart = await fetch('http://localhost:3000/cart', {
+            const responseGetCart = await fetch('http://51.20.53.161:3000/cart', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
